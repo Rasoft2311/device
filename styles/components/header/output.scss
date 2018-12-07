@@ -187,7 +187,11 @@
 }
 
 .header__catalog-list-item{
-  display: flex;
-  flex-basis: 33.33%;
+
+  @include tablet{
+    display: flex;
+    flex-basis: 33.33%;
+  }
+
 }
 
