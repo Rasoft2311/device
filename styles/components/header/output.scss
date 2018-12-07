@@ -1,0 +1,193 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.header{
+  background-color: $color-background-secondary;
+  position: relative;
+  padding:45px 10px 30px 10px;
+
+  @include tablet{
+    padding: 45px 25px 45px 25px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @include desktop{
+    padding:45px 60px 45px 60px;
+
+  }
+}
+
+.header__name{
+  font-size: $typography-h1;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: absolute;
+  top:0;
+  left:60px;
+  transform: translateY(-50%);
+}
+
+.header__name-link{
+  color:$color-text-primary;
+}
+
+.header__name-link:hover{
+  color:$color-text-primary;
+  opacity: 0.6;
+}
+
+.header__name-link:active{
+  color:$color-text-primary;
+  opacity: 0.3;
+}
+
+.header__search-nav{
+
+  @include tablet{
+    flex-basis: 250px;
+  }
+
+  @include mobile{
+    margin-bottom:10px;
+  }
+
+  @include desktop{
+    flex-basis: 440px;
+  }
+
+}
+
+.header__personal-area{
+
+  @include tablet{
+    flex-basis: 452px;
+  }
+
+  @include desktop{
+    flex-basis: 500px;
+  }
+
+}
+
+.header__nav{
+  width:100%;
+}
+
+.header__list{
+  text-align: center;
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-xl;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  color:$color-text-primary;
+
+  @include tablet{
+    display: flex;
+    margin-top:36px;
+  }
+}
+
+.header__catalog{
+  margin-right: auto;
+
+  @include tablet{
+    width:201px;
+  }
+}
+
+.header__catalog-button{
+  text-transform: uppercase;
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  padding:0;
+  border:none;
+  background-color: transparent;
+  outline: none;
+}
+
+.header__catalog-button:hover{
+  opacity: 0.6;
+}
+
+.header__catalog-button:active{
+  opacity: 0.3;
+}
+
+.header__catalog-icon{
+  margin-left:15px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("../icons/plus.svg");
+  opacity: 0.3;
+}
+
+.header__delivery{
+
+  @include tablet{
+    display: flex;
+    flex-basis: 140px;
+  }
+
+}
+
+.header__warranty{
+  @include tablet{
+    display: flex;
+    flex-basis: 140px;
+  }
+}
+
+.header__contacts{
+
+  @include tablet{
+    flex-basis: 140px;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include desktop{
+    justify-content: flex-end;
+    flex-basis: 220px;
+  }
+
+}
+
+.header__link{
+  color:$color-text-primary;
+  display: block;
+}
+
+.header__link:hover{
+  color:$color-text-primary;
+  opacity: 0.6;
+}
+
+.header__link:active{
+  color:$color-text-primary;
+  opacity: 0.3;
+}
+
+.header__catalog-list{
+  text-transform: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: $typography-text-medium;
+  line-height: 36px;
+
+  @include tablet{
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 700px;
+  }
+}
+
+.header__catalog-list-item{
+  display: flex;
+  flex-basis: 33.33%;
+}
+

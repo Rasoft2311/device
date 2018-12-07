@@ -6,3 +6,40 @@
 @import "units/typography/output";
 @import "units/base/output";
 @import "units/helpers/output";
+@import "components/header/output";
+@import "elements/search-input/output";
+@import "components/personal-area/output";
+
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.display-none{
+  display: none;
+}
+
+.basis-66{
+  flex-basis: 66.66%;
+}
+
+.basis-100{
+  flex-basis: 100%;
+}
+
+@include tablet{
+  .main-container{
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+}
+
+@include mobile{
+  .mob-mt-10{
+    margin-top: 10px;
+  }
+}
