@@ -75,13 +75,17 @@
 }
 
 .header__list{
-  text-align: center;
+
   font-family: "Gilroy", sans-serif;
   font-size: $typography-text-xl;
   font-weight: bold;
   text-transform: uppercase;
   line-height: 24px;
   color:$color-text-primary;
+
+  @include mobile{
+    text-align: center;
+  }
 
   @include tablet{
     display: flex;
@@ -93,8 +97,17 @@
   margin-right: auto;
 
   @include tablet{
-    width:201px;
+    position:relative;
   }
+}
+
+.header__catalog:hover{
+  @include tablet{
+    .header__catalog-list{
+      display: flex;
+    }
+  }
+
 }
 
 .header__catalog-button{
@@ -177,21 +190,15 @@
   font-weight: 100;
   font-size: $typography-text-medium;
   line-height: 36px;
+  background-color: $color-background-secondary;
 
   @include tablet{
-    margin-top: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    min-width: 700px;
+    position: absolute;
+    left:-60px;
+    top:100%;
+    right:-900px;
+    padding:20px 60px 30px 60px;
+    display: none;
   }
-}
-
-.header__catalog-list-item{
-
-  @include tablet{
-    display: flex;
-    flex-basis: 33.33%;
-  }
-
 }
 
