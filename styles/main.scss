@@ -57,3 +57,21 @@
     display: none;
   }
 }
+
+@include desktop{
+  .desktop-text-modifier{
+    padding-right: 108px;
+  }
+
+  .desk-ml-85{
+    margin-left: 85px;
+  }
+
+  .desk-ml-30{
+    margin-left: 30px;
+  }
+
+  .desk-mr-20{
+    margin-right: 20px;
+  }
+}

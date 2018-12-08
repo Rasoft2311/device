@@ -10,6 +10,20 @@
   }
 }
 
+#slide-1:checked ~ .main-products__slides [data-slide="1"],
+#slide-2:checked ~ .main-products__slides [data-slide="2"],
+#slide-3:checked ~ .main-products__slides [data-slide="3"]{
+  display: block;
+
+  @include tablet{
+    display: flex;
+  }
+}
+
+.main-products__slides{
+
+}
+
 .main-products__item{
   @include mobile{
     padding: 10px;
@@ -26,7 +40,7 @@
 
   @include desktop{
     justify-content: flex-start;
-    padding: 0 60px;
+    padding: 0 60px 0 0;
   }
 }
 
@@ -53,6 +67,10 @@
   @include mobile{
     text-align: center;
   }
+
+  @include tablet{
+    min-height: 493px;
+  }
 }
 
 .main-products__img{
@@ -74,19 +92,18 @@
   font-size: $typography-h2;
   line-height: 36px;
   color:$color-text-primary;
+  font-weight: bold;
 
   @include mobile{
     text-align: center;
   }
 
   @include tablet{
-    font-weight: bold;
     font-size: 36px;
     line-height: 56px;
   }
 
   @include desktop{
-    padding-right: 104px;
     font-size: $typography-h1;
     line-height: 56px;
   }
@@ -134,11 +151,11 @@
 }
 
 .main-products__sliders{
-
+  display: flex;
 }
 
 .main-products__more-button{
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .main-products__slider-button{
@@ -208,6 +225,7 @@
   position: absolute;
   font-size: $typography-large-number;
   color: $color-background-primary;
-  right:60px;
-  top:-75px;
+  line-height: 160px;
+  right:46px;
+  top:-12px;
 }

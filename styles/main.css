@@ -1665,7 +1665,7 @@ body {
 }
 
 .header__name {
-  font-size: 48px;
+  font-size: 47px;
   font-weight: bold;
   text-transform: uppercase;
   position: absolute;
@@ -1836,6 +1836,7 @@ body {
 @media screen and (min-width: 768px), print {
   .header__catalog-list {
     position: absolute;
+    z-index: 1;
     left: -60px;
     top: 100%;
     right: -900px;
@@ -2046,6 +2047,19 @@ body {
   }
 }
 
+#slide-1:checked ~ .main-products__slides [data-slide="1"],
+#slide-2:checked ~ .main-products__slides [data-slide="2"],
+#slide-3:checked ~ .main-products__slides [data-slide="3"] {
+  display: block;
+}
+@media screen and (min-width: 768px), print {
+  #slide-1:checked ~ .main-products__slides [data-slide="1"],
+#slide-2:checked ~ .main-products__slides [data-slide="2"],
+#slide-3:checked ~ .main-products__slides [data-slide="3"] {
+    display: flex;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .main-products__item {
     padding: 10px;
@@ -2064,7 +2078,7 @@ body {
 @media screen and (min-width: 1088px) {
   .main-products__item {
     justify-content: flex-start;
-    padding: 0 60px;
+    padding: 0 60px 0 0;
   }
 }
 
@@ -2092,6 +2106,11 @@ body {
     text-align: center;
   }
 }
+@media screen and (min-width: 768px), print {
+  .main-products__img-wrapper {
+    min-height: 493px;
+  }
+}
 
 @media screen and (max-width: 767px) {
   .main-products__img {
@@ -2111,6 +2130,7 @@ body {
   font-size: 36px;
   line-height: 36px;
   color: #000;
+  font-weight: bold;
 }
 @media screen and (max-width: 767px) {
   .main-products__motivation {
@@ -2119,15 +2139,13 @@ body {
 }
 @media screen and (min-width: 768px), print {
   .main-products__motivation {
-    font-weight: bold;
     font-size: 36px;
     line-height: 56px;
   }
 }
 @media screen and (min-width: 1088px) {
   .main-products__motivation {
-    padding-right: 104px;
-    font-size: 48px;
+    font-size: 47px;
     line-height: 56px;
   }
 }
@@ -2177,8 +2195,12 @@ body {
   }
 }
 
+.main-products__sliders {
+  display: flex;
+}
+
 .main-products__more-button {
-  margin: 15px;
+  margin: 15px 0;
 }
 
 .main-products__slider-button {
@@ -2250,8 +2272,9 @@ body {
   position: absolute;
   font-size: 192px;
   color: #FFF;
-  right: 60px;
-  top: -75px;
+  line-height: 160px;
+  right: 46px;
+  top: -12px;
 }
 
 .main-button {
@@ -2262,13 +2285,55 @@ body {
   border: none;
   outline: none;
   text-transform: uppercase;
+  text-decoration: none;
   line-height: 24px;
   background-color: transparent;
   color: #000;
 }
+@media screen and (max-width: 767px) {
+  .main-button {
+    padding: 8px 20px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .main-button {
+    padding: 8px 40px;
+  }
+}
+
+.main-button__text {
+  position: relative;
+}
+
+.main-button::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  background-color: #f0c52e;
+  transition: 200ms ease-in-out;
+}
+@media screen and (max-width: 767px) {
+  .main-button::before {
+    height: 100%;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .main-button::before {
+    height: 8px;
+  }
+}
 
 .main-button:hover {
   color: #000;
+}
+
+.main-button:hover::before {
+  height: 100%;
 }
 
 .visually-hidden {
@@ -2312,6 +2377,23 @@ body {
 
   .mob-display-none {
     display: none;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .desktop-text-modifier {
+    padding-right: 108px;
+  }
+
+  .desk-ml-85 {
+    margin-left: 85px;
+  }
+
+  .desk-ml-30 {
+    margin-left: 30px;
+  }
+
+  .desk-mr-20 {
+    margin-right: 20px;
   }
 }
 

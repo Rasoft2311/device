@@ -2,7 +2,6 @@
 @import "../../units/typography/utils";
 
 .main-button{
-
   position: relative;
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
@@ -10,11 +9,50 @@
   border:none;
   outline: none;
   text-transform: uppercase;
+  text-decoration: none;
   line-height: 24px;
+
   background-color: transparent;
   color: $color-text-primary;
+
+  @include mobile{
+    padding: 8px 20px;
+  }
+
+  @include tablet{
+    padding: 8px 40px;
+  }
+}
+
+.main-button__text{
+  position: relative;
+}
+
+.main-button::before{
+  content: '';
+  position: absolute;
+  width:100%;
+  top:0;
+  bottom:0;
+  left:0;
+  margin-top:auto;
+  margin-bottom: auto;
+  background-color: $color-button-primary;
+  transition: 200ms ease-in-out;
+
+  @include mobile{
+    height: 100%;
+  }
+
+  @include tablet{
+    height: 8px;
+  }
 }
 
 .main-button:hover{
   color: $color-text-primary;
+}
+
+.main-button:hover::before{
+  height: 100%;
 }
