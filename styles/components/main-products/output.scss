@@ -1,0 +1,213 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+
+.main-products{
+
+  @include tablet{
+    min-height: 493px;
+    position: relative;
+  }
+}
+
+.main-products__item{
+  @include mobile{
+    padding: 10px;
+  }
+
+  @include tablet{
+    position: absolute;
+    left: 0;
+    top: -105px;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 25px;
+  }
+
+  @include desktop{
+    justify-content: flex-start;
+    padding: 0 60px;
+  }
+}
+
+.main-products__text{
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    flex-basis: 400px;
+    margin-left: 20px;
+  }
+
+  @include desktop{
+    display: flex;
+    margin-left: auto;
+    flex-basis: 500px;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+}
+
+
+.main-products__img-wrapper{
+  @include mobile{
+    text-align: center;
+  }
+}
+
+.main-products__img{
+  @include mobile{
+  margin-bottom:10px;
+  }
+
+}
+
+.main-products__text{
+  @include tablet{
+      padding-top:52px;
+  }
+}
+
+.main-products__motivation{
+  position: relative;
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-h2;
+  line-height: 36px;
+  color:$color-text-primary;
+
+  @include mobile{
+    text-align: center;
+  }
+
+  @include tablet{
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 56px;
+  }
+
+  @include desktop{
+    padding-right: 104px;
+    font-size: $typography-h1;
+    line-height: 56px;
+  }
+}
+
+.main-products__motivation::after{
+  content: '';
+  position: absolute;
+  width:100px;
+  height: 7px;
+  background-color: $color-background-primary;
+  top:-40px;
+  left:0;
+}
+
+.main-products__info{
+  font-family: "Open Sans", sans-serif;
+  font-size: $typography-text-medium;
+  line-height: 17px;
+  color:$color-text-primary;
+
+  @include mobile{
+    margin: 15px 0;
+    text-align: justify;
+  }
+
+  @include tablet{
+    line-height: 30px;
+  }
+}
+
+.main-products__switch-area{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  @include tablet{
+    margin:25px 0;
+  }
+
+  @include desktop{
+    margin: 0;
+    justify-content: space-between;
+  }
+}
+
+.main-products__sliders{
+
+}
+
+.main-products__more-button{
+  margin: 15px;
+}
+
+.main-products__slider-button{
+  border: none;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+}
+
+.main-products__slider-fill{
+  cursor: pointer;
+  display: inline-block;
+  width:24px;
+  height: 24px;
+  background-image: url("../icons/slider-button.svg");
+  background-repeat: no-repeat;
+}
+
+.main-products__slider-empty{
+  cursor: pointer;
+  display: inline-block;
+  width:24px;
+  height: 24px;
+  background-image: url("../icons/slider-button-empty.svg");
+  background-repeat: no-repeat;
+}
+
+
+.main-products__description{
+  display: flex;
+  justify-content: space-around;
+
+  @include desktop{
+    justify-content: space-between;
+  }
+}
+
+.main-products__main-info{
+  font-family: "Gilroy", sans-serif;
+  line-height: 48px;
+  color:$color-text-primary;
+
+  @include mobile{
+    font-size: $typography-text-xl;
+    font-weight: bold;
+  }
+
+  @include tablet{
+    font-size: $typography-h2;
+  }
+}
+
+.main-products__secondary-info{
+  font-family: "Open Sans", sans-serif;
+  font-size: $typography-text-xs;
+  font-weight: 100;
+  line-height: 20px;
+  color:$color-text-primary;
+}
+
+.main-products__number{
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: $typography-large-number;
+  color: $color-background-primary;
+  right:60px;
+  top:-75px;
+}
