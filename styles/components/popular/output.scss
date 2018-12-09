@@ -1,0 +1,133 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.popular__list{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+
+  @include desktop{
+    justify-content: space-between;
+  }
+}
+
+.popular__list-item{
+  margin-bottom: 20px;
+  flex-basis: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include desktop{
+    flex-basis: 160px;
+  }
+}
+
+.popular__link{
+  position: relative;
+  display: inline-block;
+  width:160px;
+  height: 160px;
+  background-color: $color-background-secondary;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+  @include desktop{
+    box-shadow: none;
+  }
+
+}
+
+.popular__link:hover{
+    transition: 200ms ease-in-out;
+    background-color: $color-button-primary;
+}
+
+.popular__link:active::before{
+    opacity: 0.3;
+}
+
+.popular__link--1:before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--2:before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.popular__link--3:before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--4:before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--5:before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--6:before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/poppular-6.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__name{
+  max-width: 160px;
+  margin-top:20px;
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-xl;
+  font-weight: bold;
+  line-height: 24px;
+  color:$color-text-primary;
+
+  @include desktop{
+    align-self: flex-start;
+  }
+}

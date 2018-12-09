@@ -9,6 +9,8 @@
 @import "components/header/output";
 @import "elements/search-input/output";
 @import "components/personal-area/output";
+@import "components/popular/output";
+
 
 
 .visually-hidden {
@@ -21,6 +23,10 @@
 
 .display-none{
   display: none;
+}
+
+.pr-35{
+  padding-right: 35px;
 }
 
 @include tablet{

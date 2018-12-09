@@ -2039,6 +2039,140 @@ body {
   outline: none;
 }
 
+.popular__list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media screen and (min-width: 1088px) {
+  .popular__list {
+    justify-content: space-between;
+  }
+}
+
+.popular__list-item {
+  margin-bottom: 20px;
+  flex-basis: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (min-width: 1088px) {
+  .popular__list-item {
+    flex-basis: 160px;
+  }
+}
+
+.popular__link {
+  position: relative;
+  display: inline-block;
+  width: 160px;
+  height: 160px;
+  background-color: #f7e296;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+@media screen and (min-width: 1088px) {
+  .popular__link {
+    box-shadow: none;
+  }
+}
+
+.popular__link:hover {
+  transition: 200ms ease-in-out;
+  background-color: #f0c52e;
+}
+
+.popular__link:active::before {
+  opacity: 0.3;
+}
+
+.popular__link--1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.popular__link--3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--4:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--5:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/popular-5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--6:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url("../icons/poppular-6.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__name {
+  max-width: 160px;
+  margin-top: 20px;
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #000;
+}
+@media screen and (min-width: 1088px) {
+  .popular__name {
+    align-self: flex-start;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -2049,6 +2183,10 @@ body {
 
 .display-none {
   display: none;
+}
+
+.pr-35 {
+  padding-right: 35px;
 }
 
 @media screen and (min-width: 768px), print {
