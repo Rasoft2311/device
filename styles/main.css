@@ -2203,16 +2203,6 @@ body {
   margin: 15px 0;
 }
 
-.main-products__slider-button {
-  border: none;
-  background-color: transparent;
-  outline: none;
-  padding: 0;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle;
-}
-
 .main-products__slider-fill {
   cursor: pointer;
   display: inline-block;
