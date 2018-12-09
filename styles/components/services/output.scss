@@ -1,0 +1,181 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.services{
+  background-color: $color-background-third;
+
+  @include desktop{
+    min-height: 288px;
+  }
+}
+
+.services__container{
+  @include mobile{
+    padding:30px 0;
+    text-align: center;
+  }
+
+  @include tablet{
+    display: flex;
+    margin-top:200px!important;//DELETE
+  }
+}
+
+.services__buttons{
+  display: inline-block;
+  padding-right: 124px;
+  border-right: 7px solid $color-text-primary;
+
+  @include tablet{
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+
+  @include desktop{
+    padding-top:70px;
+    padding-bottom: 70px;
+    margin-left: 0px;
+    margin-right: 0px;
+    position: relative;
+    top: -90px;
+  }
+}
+
+.services__buttons .services__button-delivery{
+  padding-left: 32px;
+  padding-right: 32px;
+  margin-bottom: 24px;
+}
+
+.services__buttons .services__button-warranty{
+  padding-left: 37px;
+  padding-right: 37px;
+  margin-bottom: 24px;
+}
+
+.services__buttons .services__button-credit{
+  padding-left: 47px;
+  padding-right: 47px;
+}
+
+#service-1:checked ~ .services__buttons [for="service-1"]::before,
+#service-2:checked ~ .services__buttons [for="service-2"]::before,
+#service-3:checked ~ .services__buttons [for="service-3"]::before{
+  height: 100%;
+  width:auto;
+  right:-125px;
+  background-color: $color-text-primary;
+}
+
+#service-1:checked ~ .services__buttons [for="service-1"],
+#service-2:checked ~ .services__buttons [for="service-2"],
+#service-3:checked ~ .services__buttons [for="service-3"]{
+  color: $color-button-additions-click;
+}
+
+.services__list{
+  @include tablet{
+    padding: 10px 20px;
+    text-align: center;
+  }
+
+  @include desktop{
+    position: relative;
+    top: -99px;
+    flex-basis: 760px;
+    margin-left: auto;
+    padding:70px 0 0 0;
+    text-align: start;
+  }
+}
+
+#service-1:checked ~ .services__list [data-service="1"],
+#service-2:checked ~ .services__list [data-service="2"],
+#service-3:checked ~ .services__list [data-service="3"]{
+  display: block;
+}
+
+.services__name{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-h2;
+  font-weight: bold;
+  line-height: $typography-h2;
+  color:$color-text-primary;
+
+  @include mobile{
+    margin: 20px 0;
+  }
+
+  @include tablet{
+    margin: 10px 0;
+  }
+
+  @include desktop{
+    margin: 0;
+    font-size: $typography-h1;
+    line-height: 48px;
+  }
+}
+
+.services__about{
+  text-align: left;
+  font-family: "Open Sans", sans-serif;
+  font-size: $typography-text-medium;
+  font-weight: 100;
+  line-height: 30px;
+  color:$color-text-primary;
+
+  @include mobile{
+    padding: 0 60px;
+    margin-bottom: 30px;
+  }
+
+  @include tablet{
+    margin: 20px 0;
+  }
+
+  @include desktop{
+    max-width: 440px;
+    margin-top:30px;
+    margin-bottom: 0;
+  }
+}
+
+.services__img-1{
+  display: inline-block;
+  width: 136px;
+  height: 164px;
+  background-image: url("../icons/delivery.svg");
+
+  @include desktop{
+    position: absolute;
+    top: 82px;
+    right: 40px;
+  }
+}
+
+.services__img-2{
+  display: inline-block;
+  width: 171px;
+  height: 195px;
+  background-image: url("../icons/warranty.svg");
+
+  @include desktop{
+    position: absolute;
+    top: 82px;
+    right: 40px;
+  }
+}
+
+.services__img-3{
+  display: inline-block;
+  width: 156px;
+  height: 188px;
+  background-image: url("../icons/credit.svg");
+
+  @include desktop{
+    position: absolute;
+    top: 82px;
+    right: 40px;
+  }
+}
