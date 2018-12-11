@@ -2040,11 +2040,19 @@ body {
   outline: none;
 }
 
+.main-products {
+  position: relative;
+}
+
 @media screen and (min-width: 768px), print {
-  .main-products {
-    min-height: 493px;
-    position: relative;
+  .main-products.main-container {
+    margin-top: -100px;
   }
+}
+
+#slide-1, #slide-2, #slide-3 {
+  left: 0;
+  top: 50%;
 }
 
 #slide-1:checked ~ .main-products__slides [data-slide="1"],
@@ -2067,9 +2075,6 @@ body {
 }
 @media screen and (min-width: 768px), print {
   .main-products__item {
-    position: absolute;
-    left: 0;
-    top: -105px;
     display: flex;
     justify-content: space-around;
     padding: 0 25px;
@@ -2087,6 +2092,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    flex-shrink: 0;
     flex-basis: 400px;
     margin-left: 20px;
   }
@@ -2150,14 +2156,16 @@ body {
   }
 }
 
-.main-products__motivation::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 7px;
-  background-color: #FFF;
-  top: -40px;
-  left: 0;
+@media screen and (min-width: 768px), print {
+  .main-products__motivation::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 7px;
+    background-color: #FFF;
+    top: -40px;
+    left: 0;
+  }
 }
 
 .main-products__info {
@@ -2206,19 +2214,21 @@ body {
 .main-products__slider-fill {
   cursor: pointer;
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
   background-image: url("../icons/slider-button.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main-products__slider-empty {
   cursor: pointer;
   display: inline-block;
-  width: 24px;
-  height: 24px;
+  width: 12px;
+  height: 12px;
   background-image: url("../icons/slider-button-empty.svg");
   background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .main-products__description {
@@ -2227,8 +2237,18 @@ body {
 }
 @media screen and (min-width: 1088px) {
   .main-products__description {
-    justify-content: space-between;
+    justify-content: flex-start;
   }
+}
+
+@media screen and (min-width: 1088px) {
+  .main-products__description-item {
+    margin-right: 80px;
+  }
+}
+
+.main-products__description-item:last-child {
+  margin-right: 0;
 }
 
 .main-products__main-info {
