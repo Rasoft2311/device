@@ -17,7 +17,6 @@
 
   @include tablet{
     display: flex;
-    margin-top:200px!important;//DELETE
   }
 }
 
@@ -36,8 +35,7 @@
     padding-bottom: 70px;
     margin-left: 0px;
     margin-right: 0px;
-    position: relative;
-    top: -90px;
+    margin-top:-90px;
   }
 }
 
@@ -63,7 +61,7 @@
 #service-3:checked ~ .services__buttons [for="service-3"]::before{
   height: 100%;
   width:auto;
-  right:-125px;
+  right:-126px;
   background-color: $color-text-primary;
 }
 
@@ -80,8 +78,7 @@
   }
 
   @include desktop{
-    position: relative;
-    top: -99px;
+    margin-top:-99px;
     flex-basis: 760px;
     margin-left: auto;
     padding:70px 0 0 0;
