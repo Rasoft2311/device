@@ -2338,6 +2338,10 @@ body {
   color: #000;
 }
 
+.main-button:active .main-button__text {
+  opacity: 0.3;
+}
+
 .main-button:hover::before {
   height: 100%;
 }
