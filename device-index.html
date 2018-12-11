@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./styles/main.css"/>
   </head>
   <body>
-    <header class="main-container header">
+    <header class="main-container header header--large-height">
       <h1 class="header__name"><a class="header__name-link" href="#">Device</a></h1>
       <nav class="header__search-nav">
         <form>
@@ -80,68 +80,98 @@
       </nav>
     </header>
   <main>
-    <section>
-      <h2>Три самых продаваемых товара</h2>
-      <div>
-        <img src="images/slider-1.png" alt="Длинная селфи палка">
-        <span>01</span>
-        <p>Делай селфи, как Бен Стиллер!</p>
-        <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-        <a href="#">Подробнее</a>
-        <button><span aria-label="Активный слайдер"></span></button>
-        <button><span aria-label="Неактивный слайдер"></span></button>
-        <button><span aria-label="Неактивный слайдер"></span></button>
-        <ul>
-          <li>
-            <span>8,5 м</span>
-            <span>Длина палки</span>
-          </li>
-          <li>
-            <span>5 кг</span>
-            <span>Вес палки</span>
-          </li>
-          <li>
-            <span>Карбон</span>
-            <span>Материал</span>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <img src="images/slider-2.png" alt="Фитнес браслет">
-        <span>02</span>
-        <p>Худеем правильно!</p>
-        <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-        <a href="#">Подробнее</a>
-        <button><span aria-label="Неактивный слайдер"></span></button>
-        <button><span aria-label="Активный слайдер"></span></button>
-        <button><span aria-label="Неактивный слайдер"></span></button>
-        <ul>
-          <li>
-            <span>48 часов</span>
-            <span>Без подзарядки</span>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <img src="images/slider-3.png" alt="Квадрокоптер">
-        <span>03</span>
-        <p>Порхает как бабочка, жалит как пчела!</p>
-        <p>Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
-        <a href="#">Подробнее</a>
-        <button><span aria-label="Активный слайдер"></span></button>
-        <button><span aria-label="Неактивный слайдер"></span></button>
-        <button><span aria-label="Неактивный слайдер"></span></button>
-        <ul>
-          <li>
-            <span>800 м</span>
-            <span>Дальность полета</span>
-          </li>
-          <li>
-            <span>50 м</span>
-            <span>Дальность поражения</span>
-          </li>
-        </ul>
-      </div>
+    <section class="main-products main-container">
+      <h2 class="visually-hidden">Три самых продаваемых товара</h2>
+      <input id="slide-1" name="main-products" class="visually-hidden" type="radio" checked />
+      <input id="slide-2" name="main-products" class="visually-hidden" type="radio" />
+      <input id="slide-3" name="main-products" class="visually-hidden" type="radio" />
+      <ul class="main-products__slides">
+        <li class="main-products__item display-none" data-slide="1">
+          <div class="main-products__img-wrapper desk-ml-85">
+            <img class="main-products__img" src="images/slider-1.png" alt="Длинная селфи палка">
+          </div>
+          <span class="mob-display-none main-products__number">01</span>
+          <div class="main-products__text">
+            <p class="main-products__motivation desktop-text-modifier">Делай селфи, как Бен Стиллер!</p>
+            <p class="main-products__info">Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <div class="main-products__switch-area">
+              <a class="main-button main-products__more-button" href="#"><span class="main-button__text">Подробнее</span></a>
+              <ul class="main-products__sliders">
+                <li class="mr-20"><label for="slide-1" class="main-products__slider-fill" aria-label="Активный слайдер"></label></li>
+                <li class="mr-20"><label for="slide-2" class="main-products__slider-empty" aria-label="Неактивный слайдер"></label></li>
+                <li><label for="slide-3" class="main-products__slider-empty" aria-label="Неактивный слайдер"></label></li>
+              </ul>
+            </div>
+            <ul class="main-products__description">
+              <li class="main-products__description-item">
+                <div class="main-products__main-info">8,5 м</div>
+                <span class="main-products__secondary-info">Длина палки</span>
+              </li>
+              <li class="main-products__description-item">
+                <div class="main-products__main-info">5 кг</div>
+                <span class="main-products__secondary-info">Вес палки</span>
+              </li>
+              <li class="main-products__description-item">
+                <div class="main-products__main-info">Карбон</div>
+                <span class="main-products__secondary-info" >Материал</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="main-products__item display-none" data-slide="2">
+          <div class="main-products__img-wrapper desk-ml-85">
+            <img class="main-products__img" src="images/slider-2.png" alt="Фитнес браслет">
+          </div>
+          <span class="mob-display-none main-products__number">02</span>
+          <div class="main-products__text">
+            <p class="main-products__motivation">Худеем<br> правильно!</p>
+            <p class="main-products__info">Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <div class="main-products__switch-area">
+              <a class="main-button main-products__more-button" href="#"><span class="main-button__text">Подробнее</span></a>
+              <ul class="main-products__sliders">
+                <li class="mr-20"><label for="slide-1" class="main-products__slider-empty" aria-label="Неактивный слайдер"></label></li>
+                <li class="mr-20"><label for="slide-2" class="main-products__slider-fill" aria-label="Активный слайдер"></label></li>
+                <li><label for="slide-3" class="main-products__slider-empty" aria-label="Неактивный слайдер"></label></li>
+              </ul>
+            </div>
+            <ul class="main-products__description">
+              <li class="main-products__description-item">
+                <div class="main-products__main-info">48 часов</div>
+                <span class="main-products__secondary-info">Без подзарядки</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="main-products__item display-none" data-slide="3">
+          <div class="main-products__img-wrapper desk-ml-30 desk-mr-20">
+            <img class="main-products__img" src="images/slider-3.png" alt="Квадрокоптер">
+          </div>
+          <span class="mob-display-none main-products__number">03</span>
+          <div class="main-products__text">
+            <p class="main-products__motivation">Порхает как бабочка, жалит как пчела!</p>
+            <p class="main-products__info">Этот обычный, на первый взгляд, квадрокоптер оснащен мощным лазером, замаскированным под стандартную камеру.</p>
+            <div class="main-products__switch-area">
+              <a class="main-button main-products__more-button" href="#"><span class="main-button__text">Подробнее</span></a>
+              <ul class="main-products__sliders">
+                <li class="mr-20"><label for="slide-1" class="main-products__slider-empty" aria-label="Неактивный слайдер"></label></li>
+                <li class="mr-20"><label for="slide-2" class="main-products__slider-empty" aria-label="Неактивный слайдер"></label></li>
+                <li><label for="slide-3" class="main-products__slider-fill" aria-label="Активный слайдер"></label></li>
+              </ul>
+            </div>
+            <ul class="main-products__description">
+              <li class="main-products__description-item">
+                <div class="main-products__main-info">800 м</div>
+                <span class="main-products__secondary-info">Дальность полета</span>
+              </li>
+              <li class="main-products__description-item">
+                <div class="main-products__main-info">50 м</div>
+                <span class="main-products__secondary-info">Дальность поражения</span>
+              </li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+
     </section>
     <section>
       <h2>Самые популярные товары</h2>

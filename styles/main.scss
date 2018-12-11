@@ -9,6 +9,8 @@
 @import "components/header/output";
 @import "elements/search-input/output";
 @import "components/personal-area/output";
+@import "components/main-products/output";
+@import "elements/main-button/output";
 
 
 .visually-hidden {
@@ -23,7 +25,15 @@
   display: none;
 }
 
+.mr-20{
+  margin-right: 20px;
+}
+
 @include tablet{
+
+  .header--large-height{
+    padding-bottom:163px;
+  }
   .main-container{
     max-width: 1160px;
     margin: 0 auto;
@@ -45,5 +55,23 @@
 
   .mob-display-none{
     display: none;
+  }
+}
+
+@include desktop{
+  .desktop-text-modifier{
+    padding-right: 108px;
+  }
+
+  .desk-ml-85{
+    margin-left: 85px;
+  }
+
+  .desk-ml-30{
+    margin-left: 30px;
+  }
+
+  .desk-mr-20{
+    margin-right: 20px;
   }
 }
