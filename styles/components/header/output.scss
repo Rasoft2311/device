@@ -60,10 +60,6 @@
 
 .header__personal-area{
 
-  @include tablet{
-    flex-basis: 452px;
-  }
-
   @include desktop{
     flex-basis: 500px;
   }

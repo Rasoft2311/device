@@ -25,25 +25,26 @@
       <section class="personal-area header__personal-area">
         <h2 class="visually-hidden">Личный кабинет</h2>
         <p class="personal-area__profile">
-          <span class="personal-area__profile-img" aria-label="Профиль"></span>
-          <a class="display-none" href="#">Войти</a>
-          <span class="personal-area__name">Валентин Петрович</span>
-          <label class="personal-area__label">
-            <input type="button" value="Выйти" class="personal-area__button">
-          </label>
+          <a class="display-none personal-area__button personal-area__button--session" href="#">
+            <span class="personal-area__profile-img" aria-label="Профиль"></span>
+            Войти
+          </a>
+          <a href="#" class="personal-area__name personal-area__button personal-area__button--session">
+            <span class="personal-area__profile-img" aria-label="Профиль"></span>
+            Валентин Петрович
+          </a>
+          <button class="personal-area__button personal-area__button--session">
+            Выйти
+          </button>
         </p>
-        <p class="personal-area__compare">
-          <label class="personal-area__label">
-            <span class="personal-area__compare-img" aria-label="Сравнение"></span>
-            <input type="button" value="Сравнить" class="personal-area__button">
-          </label>
-        </p>
-        <p class="personal-area__cart">
-          <label class="personal-area__label">
-            <span class="personal-area__cart-img" aria-label="Корзина"></span>
-            <input type="button" value="Корзина" class="personal-area__button">
-          </label>
-        </p>
+        <button class="personal-area__button personal-area__button--posibilities">
+          <span class="personal-area__compare-img" aria-label="Сравнение"></span>
+          Сравнить
+        </button>
+        <button class="personal-area__button personal-area__button--posibilities">
+          <span class="personal-area__cart-img" aria-label="Корзина"></span>
+          Корзина
+        </button>
       </section>
       <nav class="header__nav">
         <ul class="header__list">
