@@ -3,23 +3,24 @@
 
 .popular__list{
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  overflow: auto;
+  padding: 20px;
 
   @include desktop{
     justify-content: space-between;
+    padding: 0;
   }
 }
 
 .popular__list-item{
-  margin-bottom: 20px;
-  flex-basis: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-right: 30px;
 
   @include desktop{
     flex-basis: 160px;
+    margin-right: 0;
   }
 }
 
@@ -44,6 +45,10 @@
 
 .popular__link:active::before{
     opacity: 0.3;
+}
+
+.popular__link:active + .popular__name{
+  opacity: 0.3;
 }
 
 .popular__link--1:before{
@@ -129,5 +134,10 @@
 
   @include desktop{
     align-self: flex-start;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1190px)  {
+    text-align: start;
   }
 }
