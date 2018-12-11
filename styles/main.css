@@ -1704,11 +1704,6 @@ body {
   }
 }
 
-@media screen and (min-width: 768px), print {
-  .header__personal-area {
-    flex-basis: 452px;
-  }
-}
 @media screen and (min-width: 1088px) {
   .header__personal-area {
     flex-basis: 500px;
@@ -1877,11 +1872,13 @@ body {
   opacity: 1;
 }
 
-.search-input__input:focus ~ .display-none {
+.search-input__input:focus ~ .search-input__button,
+.search-input__input:focus ~ .search-input__border-bottom {
   display: inline-block;
 }
 
 .search-input__button {
+  display: none;
   position: absolute;
   bottom: -9px;
   right: 0;
@@ -1906,7 +1903,12 @@ body {
   opacity: 0.3;
 }
 
+.search-input__button::before {
+  content: "";
+}
+
 .search-input__border-bottom {
+  display: none;
   position: absolute;
   width: 100%;
   height: 2px;
@@ -1926,12 +1928,16 @@ body {
   line-height: 30px;
   color: #000;
   display: flex;
-  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .personal-area {
+    flex-wrap: wrap;
+  }
 }
 @media screen and (min-width: 768px), print {
   .personal-area {
     margin-left: auto;
-    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -1949,43 +1955,13 @@ body {
 @media screen and (min-width: 768px), print {
   .personal-area__profile {
     margin-right: 30px;
+    min-width: 193px;
+    justify-content: flex-start;
   }
 }
 @media screen and (min-width: 1088px) {
   .personal-area__profile {
     margin-right: auto;
-  }
-}
-
-.personal-area__compare {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width: 767px) {
-  .personal-area__compare {
-    flex-basis: 50%;
-    margin-bottom: 10px;
-  }
-}
-@media screen and (min-width: 768px), print {
-  .personal-area__compare {
-    margin-right: 15px;
-  }
-}
-@media screen and (min-width: 1088px) {
-  .personal-area__compare {
-    margin-right: 35px;
-  }
-}
-
-.personal-area__cart {
-  display: flex;
-  justify-content: center;
-}
-@media screen and (max-width: 767px) {
-  .personal-area__cart {
-    flex-basis: 50%;
-    margin-bottom: 10px;
   }
 }
 
@@ -2014,29 +1990,59 @@ body {
 }
 
 .personal-area__name {
+  color: #000;
   margin-right: 20px;
 }
 
-.personal-area__label {
-  cursor: pointer;
-}
-
-.personal-area__label:hover {
+.personal-area__name:hover {
   opacity: 0.6;
 }
 
-.personal-area__label:active {
+.personal-area__name:active {
   opacity: 0.3;
 }
 
 .personal-area__button {
-  font-family: "Open Sans", sans-serif;
   font-weight: 100;
   cursor: pointer;
   padding: 0;
   border: none;
   background-color: transparent;
   outline: none;
+}
+
+.personal-area__button--session {
+  align-self: stretch;
+}
+
+@media screen and (max-width: 767px) {
+  .personal-area__button-posibilities {
+    flex-basis: 50%;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .personal-area__button-posibilities {
+    margin-right: 20px;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .personal-area__button-posibilities {
+    margin-right: 40px;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .personal-area__button:last-child {
+    margin-right: 0;
+  }
+}
+
+.personal-area__button:hover {
+  opacity: 0.6;
+}
+
+.personal-area__button:active {
+  opacity: 0.3;
 }
 
 .visually-hidden {

@@ -8,11 +8,14 @@
   line-height: 30px;
   color:$color-text-primary;
   display:flex;
-  flex-wrap: wrap;
+
+  @include mobile{
+    flex-wrap: wrap;
+  }
 
   @include tablet{
     margin-left: auto;
-    display: flex;
+    justify-content: flex-end;
   }
 }
 
@@ -30,43 +33,13 @@
 
   @include tablet{
     margin-right: 30px;
+    min-width: 193px;
+    justify-content: flex-start;
   }
 
   @include desktop{
     margin-right: auto;
   }
-}
-
-.personal-area__compare{
-
-  display: flex;
-  justify-content: center;
-
-  @include mobile{
-    flex-basis:50%;
-    margin-bottom: 10px;
-  }
-
-  @include tablet{
-    margin-right: 15px;
-  }
-
-  @include desktop{
-    margin-right: 35px;
-  }
-
-}
-
-.personal-area__cart{
-
-  display: flex;
-  justify-content: center;
-
-  @include mobile{
-    flex-basis:50%;
-    margin-bottom: 10px;
-  }
-
 }
 
 .personal-area__profile-img{
@@ -94,27 +67,57 @@
 }
 
 .personal-area__name{
+  color:$color-text-primary;
   margin-right: 20px;
 }
 
-.personal-area__label{
-  cursor: pointer;
-}
-
-.personal-area__label:hover{
+.personal-area__name:hover{
   opacity: 0.6;
 }
 
-.personal-area__label:active{
+.personal-area__name:active{
   opacity: 0.3;
 }
 
 .personal-area__button{
-  font-family: "Open Sans", sans-serif;
   font-weight: 100;
   cursor: pointer;
   padding:0;
   border:none;
   background-color: transparent;
   outline: none;
+}
+
+.personal-area__button--session{
+  align-self: stretch;
+}
+
+.personal-area__button-posibilities{
+  @include mobile{
+    flex-basis: 50%;
+  }
+
+  @include tablet{
+    margin-right: 20px;
+  }
+
+  @include desktop{
+    margin-right: 40px;
+  }
+
+}
+
+.personal-area__button:last-child{
+  @include tablet{
+    margin-right: 0;
+  }
+
+}
+
+.personal-area__button:hover{
+  opacity: 0.6;
+}
+
+.personal-area__button:active{
+  opacity: 0.3;
 }
