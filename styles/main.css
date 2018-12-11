@@ -2035,6 +2035,34 @@ body {
   opacity: 0.3;
 }
 
+.logos__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 767px) {
+  .logos__list {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .logos__list {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .logos__list-item {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .logos__list-item {
+    flex-basis: auto;
+  }
+}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
