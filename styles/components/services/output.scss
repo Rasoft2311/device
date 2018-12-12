@@ -2,14 +2,30 @@
 @import "../../units/typography/utils";
 
 .services{
-  background-color: $color-background-third;
+  position: relative;
 
   @include desktop{
     min-height: 288px;
   }
 }
 
+.services::before{
+  content: '';
+  position: absolute;
+  bottom:0;
+  left:0;
+  right: 0;
+  top:0;
+  background-color: $color-background-third;
+
+  @include desktop{
+    top:90px;
+    bottom:-60px;
+  }
+}
+
 .services__container{
+  position: relative;
   @include mobile{
     padding:30px 0;
     text-align: center;
@@ -22,8 +38,12 @@
 
 .services__buttons{
   display: inline-block;
-  padding-right: 124px;
+  min-width:291px;
   border-right: 7px solid $color-text-primary;
+
+  @include mobile{
+    border-left: 7px solid #000;
+  }
 
   @include tablet{
     margin-left: 30px;
@@ -35,25 +55,16 @@
     padding-bottom: 70px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-top:-90px;
   }
 }
 
-.services__buttons .services__button-delivery{
-  padding-left: 32px;
-  padding-right: 32px;
-  margin-bottom: 24px;
+.services__buttons-item{
+  position: relative;
+  margin-bottom:24px;
 }
 
-.services__buttons .services__button-warranty{
-  padding-left: 37px;
-  padding-right: 37px;
-  margin-bottom: 24px;
-}
-
-.services__buttons .services__button-credit{
-  padding-left: 47px;
-  padding-right: 47px;
+.services__buttons-item:last-child{
+  margin-bottom: 0;
 }
 
 #service-1:checked ~ .services__buttons [for="service-1"]::before,
@@ -61,13 +72,14 @@
 #service-3:checked ~ .services__buttons [for="service-3"]::before{
   height: 100%;
   width:auto;
-  right:-126px;
+  right:0;
   background-color: $color-text-primary;
 }
 
 #service-1:checked ~ .services__buttons [for="service-1"],
 #service-2:checked ~ .services__buttons [for="service-2"],
 #service-3:checked ~ .services__buttons [for="service-3"]{
+  position: static;
   color: $color-button-additions-click;
 }
 
@@ -79,12 +91,15 @@
 
   @include desktop{
     position: relative;
-    margin-top:-99px;
     flex-basis: 760px;
     margin-left: auto;
-    padding:70px 0 0 0;
+    padding:61px 0 0 0;
     text-align: start;
   }
+}
+
+.services__list-item{
+  display: none;
 }
 
 #service-1:checked ~ .services__list [data-service="1"],
@@ -147,7 +162,7 @@
 
   @include desktop{
     position: absolute;
-    top: 82px;
+    top: 75px;
     right: 40px;
   }
 }
@@ -160,7 +175,7 @@
 
   @include desktop{
     position: absolute;
-    top: 82px;
+    top: 75px;
     right: 40px;
   }
 }
@@ -173,7 +188,7 @@
 
   @include desktop{
     position: absolute;
-    top: 82px;
+    top: 75px;
     right: 40px;
   }
 }
