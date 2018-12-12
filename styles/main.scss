@@ -12,8 +12,6 @@
 @import "components/main-products/output";
 @import "elements/main-button/output";
 @import "components/info-section/output";
-@import "components/about/output";
-@import "components/contacts/output";
 
 
 .visually-hidden {
@@ -33,6 +31,10 @@
 }
 
 @include tablet{
+
+  .tablet-basis-50{
+    flex-basis: 50%;
+  }
 
   .header--large-height{
     padding-bottom:163px;

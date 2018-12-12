@@ -2284,6 +2284,8 @@ body {
 }
 
 .main-button {
+  cursor: pointer;
+  display: inline-block;
   position: relative;
   font-family: "Gilroy", sans-serif;
   font-weight: bold;
@@ -2346,72 +2348,170 @@ body {
   height: 100%;
 }
 
-@media screen and (max-width: 767px) {
-  .about {
-    padding: 0 10px;
+@media screen and (min-width: 768px), print {
+  .info-section-wrapper {
+    display: flex;
   }
 }
 
-.about__header {
+.info-section {
+  position: relative;
+  padding: 40px 10px 0 10px;
+}
+@media screen and (max-width: 767px) {
+  .info-section {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .info-section {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 20px;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .info-section {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.info-section__header {
   font-family: "Gilroy", sans-serif;
   font-size: 36px;
   line-height: 36px;
   color: #000;
   font-weight: bold;
-  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .info-section__header {
+    margin-bottom: 20px;
+  }
 }
 @media screen and (min-width: 768px), print {
-  .about__header {
+  .info-section__header {
+    margin-bottom: 55px;
     font-size: 47px;
     line-height: 48px;
   }
 }
 
-.about__main-text {
-  max-width: 421px;
+.info-section__header:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #000;
+}
+@media screen and (max-width: 767px) {
+  .info-section__header:before {
+    top: 20px;
+    left: 10px;
+    right: 10px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .info-section__header:before {
+    left: 20px;
+    width: 80px;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .info-section__header:before {
+    left: 0;
+  }
+}
+
+.info-section__main-text {
   font-family: "Open Sans", sans-serif;
   font-size: 15px;
   font-weight: 100;
   line-height: 20px;
+  text-align: left;
+}
+@media screen and (max-width: 767px) {
+  .info-section__main-text {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 @media screen and (min-width: 768px), print {
-  .about__main-text {
+  .info-section__main-text {
     line-height: 30px;
   }
 }
 
-.about__main-text-divider {
+.info-section__main-text--max-472 {
+  max-width: 472px;
+}
+
+.info-section__main-text--max-520 {
+  max-width: 520px;
+}
+
+.info-section__main-text-divider {
+  display: block;
   margin-bottom: 20px;
 }
 @media screen and (min-width: 768px), print {
-  .about__main-text-divider {
+  .info-section__main-text-divider {
     margin-bottom: 35px;
   }
 }
 
-.about__coop-list {
-  margin: 20px 0 20px 30px;
+@media screen and (max-width: 767px) {
+  .info-section__coop-list {
+    margin: 20px 0 20px 30px;
+    text-align: left;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .info-section__coop-list {
+    line-height: 35px;
+    margin-top: 75px;
+    margin-bottom: 50px;
+  }
 }
 
-.about__coop-list-item {
+.info-section__coop-list-item {
   font-family: "Gilroy", sans-serif;
   font-size: 14px;
-  line-height: 15px;
   color: #000;
   font-weight: bold;
-  margin-bottom: 5px;
 }
 
-.about__coop-list-item:last-child {
+.info-section__coop-list-item:last-child {
   margin-bottom: 0;
 }
 
-.about__coop-list-circle {
+.info-section__coop-list-circle {
   vertical-align: middle;
   display: inline-block;
   width: 18px;
   height: 18px;
   background-image: url("../icons/list-circle.svg");
+}
+
+@media screen and (max-width: 767px) {
+  .info-section__location-img {
+    margin: 20px 0;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .info-section__location-img {
+    margin-top: 40px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .info-section__button {
+    margin-top: auto;
+  }
 }
 
 .visually-hidden {
@@ -2431,6 +2531,10 @@ body {
 }
 
 @media screen and (min-width: 768px), print {
+  .tablet-basis-50 {
+    flex-basis: 50%;
+  }
+
   .header--large-height {
     padding-bottom: 163px;
   }

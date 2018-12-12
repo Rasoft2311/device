@@ -1,3 +1,162 @@
 @import "../../units/colors/utils";
 @import "../../units/typography/utils";
 
+.info-section-wrapper{
+  @include tablet{
+    display: flex;
+  }
+}
+
+
+.info-section{
+  position: relative;
+  padding: 40px 10px 0 10px;
+  @include mobile{
+    text-align: center;
+
+  }
+
+  @include tablet{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding:50px 20px;
+  }
+
+  @media screen and (min-width: 1180px){
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+}
+
+.info-section__header{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-h2;
+  line-height: 36px;
+  color:$color-text-primary;
+  font-weight: bold;
+
+
+  @include mobile{
+    margin-bottom: 20px;
+  }
+
+  @include tablet{
+    margin-bottom: 55px;
+    font-size: $typography-h1;
+    line-height: 48px;
+  }
+}
+
+.info-section__header:before{
+  content: '';
+  position: absolute;
+  top:0;
+  left:0;
+  height: 4px;
+  background-color: $color-text-primary;
+
+
+  @include mobile{
+    top:20px;
+    left:10px;
+    right: 10px;
+  }
+
+  @include tablet{
+    left:20px;
+    width: 80px;
+  }
+
+  @media screen and (min-width: 1180px){
+    left:0;
+  }
+}
+
+.info-section__main-text{
+  font-family: "Open Sans", sans-serif;
+  font-size: $typography-text-medium;
+  font-weight: 100;
+  line-height: 20px;
+  text-align: left;
+
+
+  @include mobile{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @include tablet{
+    line-height: 30px;
+  }
+}
+
+.info-section__main-text--max-472{
+  max-width: 472px;
+}
+.info-section__main-text--max-520{
+  max-width: 520px;
+}
+
+.info-section__main-text-divider{
+  display: block;
+  margin-bottom:20px;
+
+  @include tablet{
+    margin-bottom:35px;
+  }
+}
+
+.info-section__coop-list{
+  @include mobile{
+    margin:20px 0 20px 30px;
+    text-align: left;
+    line-height: 20px;
+  }
+
+  @include tablet{
+    line-height: 35px;
+    margin-top:75px;
+    margin-bottom: 50px;
+  }
+
+}
+
+.info-section__coop-list-item{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-small;
+  color:$color-text-primary;
+  font-weight: bold;
+}
+
+.info-section__coop-list-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.info-section__coop-list-circle{
+  vertical-align: middle;
+  display: inline-block;
+  width:18px;
+  height: 18px;
+  background-image: url("../icons/list-circle.svg");
+}
+
+.info-section__location-img{
+
+  @include mobile{
+    margin:20px 0;
+  }
+
+  @include tablet{
+    margin-top:40px;
+    margin-bottom: 50px;
+  }
+}
+
+.info-section__button{
+  @include tablet{
+    margin-top:auto;
+  }
+}
