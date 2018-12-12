@@ -56,6 +56,15 @@
 
 }
 
+.popular__link::before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
 .popular__link:hover{
     transition: 200ms ease-in-out;
     background-color: $color-button-primary;
@@ -69,73 +78,37 @@
   opacity: 0.3;
 }
 
-.popular__link--1:before{
-  content: '';
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.popular__link--1::before{
   background-image: url("../icons/popular-1.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.popular__link--2:before{
-  content: '';
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.popular__link--2::before{
   background-image: url("../icons/popular-2.svg");
   background-repeat: no-repeat;
   background-position: bottom;
 }
 
-.popular__link--3:before{
-  content: '';
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.popular__link--3::before{
   background-image: url("../icons/popular-3.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.popular__link--4:before{
-  content: '';
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.popular__link--4::before{
   background-image: url("../icons/popular-4.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.popular__link--5:before{
-  content: '';
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.popular__link--5::before{
   background-image: url("../icons/popular-5.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.popular__link--6:before{
-  content: '';
-  position: absolute;
-  top:0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+.popular__link--6::before{
   background-image: url("../icons/poppular-6.svg");
   background-repeat: no-repeat;
   background-position: center;
