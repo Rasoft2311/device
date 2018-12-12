@@ -1,2 +1,70 @@
 @import "../../units/colors/utils";
 @import "../../units/typography/utils";
+
+
+.about{
+  @include mobile{
+    padding: 0 10px;
+  }
+
+}
+
+.about__header{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-h2;
+  line-height: 36px;
+  color:$color-text-primary;
+  font-weight: bold;
+  margin-bottom: 20px;
+
+  @include tablet{
+    font-size: $typography-h1;
+    line-height: 48px;
+  }
+}
+
+.about__main-text{
+  max-width: 421px;
+  font-family: "Open Sans", sans-serif;
+  font-size: $typography-text-medium;
+  font-weight: 100;
+  line-height: 20px;
+
+  @include tablet{
+    line-height: 30px;
+  }
+}
+
+.about__main-text-divider{
+  margin-bottom:20px;
+
+  @include tablet{
+    margin-bottom:35px;
+  }
+}
+
+.about__coop-list{
+  margin:20px 0 20px 30px;
+}
+
+.about__coop-list-item{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-small;
+  line-height: 15px;
+  color:$color-text-primary;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.about__coop-list-item:last-child {
+  margin-bottom: 0;
+}
+
+
+.about__coop-list-circle{
+  vertical-align: middle;
+  display: inline-block;
+  width:18px;
+  height: 18px;
+  background-image: url("../icons/list-circle.svg");
+}
