@@ -4,7 +4,7 @@
 .popular__list{
   display: flex;
   overflow: auto;
-  padding: 20px;
+  padding: 20px 0;
 
   @include desktop{
     justify-content: space-between;
@@ -16,11 +16,29 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 30px;
+  padding-right: 15px;
+  padding-left: 15px;
 
   @include desktop{
+    padding-right: 0;
+    padding-left: 0;
     flex-basis: 160px;
     margin-right: 0;
+  }
+}
+
+.popular__list-item:first-child{
+  padding-left: 40px;
+  @include desktop{
+    padding-left: 0;
+  }
+}
+
+.popular__list-item:last-child{
+  padding-right: 40px;
+
+  @include desktop{
+    padding-right: 0;
   }
 }
 
