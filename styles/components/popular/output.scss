@@ -1,0 +1,134 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.popular__list{
+  display: flex;
+  overflow: auto;
+  padding: 20px 0;
+
+  @include desktop{
+    justify-content: space-between;
+    padding: 0;
+  }
+}
+
+.popular__list-item{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
+
+  @include desktop{
+    padding-right: 0;
+    padding-left: 0;
+    flex-basis: 160px;
+    margin-right: 0;
+  }
+}
+
+.popular__list-item:first-child{
+  padding-left: 40px;
+  @include desktop{
+    padding-left: 0;
+  }
+}
+
+.popular__list-item:last-child{
+  padding-right: 40px;
+
+  @include desktop{
+    padding-right: 0;
+  }
+}
+
+.popular__link{
+  position: relative;
+  display: inline-block;
+  width:160px;
+  height: 160px;
+  background-color: $color-background-secondary;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
+
+  @include desktop{
+    box-shadow: none;
+  }
+
+}
+
+.popular__link::before{
+  content: '';
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.popular__link:hover{
+    transition: 200ms ease-in-out;
+    background-color: $color-button-primary;
+}
+
+.popular__link:active::before{
+    opacity: 0.3;
+}
+
+.popular__link:active + .popular__name{
+  opacity: 0.3;
+}
+
+.popular__link--1::before{
+  background-image: url("../icons/popular-1.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--2::before{
+  background-image: url("../icons/popular-2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+
+.popular__link--3::before{
+  background-image: url("../icons/popular-3.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--4::before{
+  background-image: url("../icons/popular-4.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--5::before{
+  background-image: url("../icons/popular-5.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__link--6::before{
+  background-image: url("../icons/poppular-6.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.popular__name{
+  max-width: 160px;
+  margin-top:20px;
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-xl;
+  font-weight: bold;
+  line-height: 24px;
+  color:$color-text-primary;
+
+  @include desktop{
+    align-self: flex-start;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 1190px)  {
+    text-align: start;
+  }
+}

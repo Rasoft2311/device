@@ -11,6 +11,7 @@
 @import "components/personal-area/output";
 @import "components/main-products/output";
 @import "elements/main-button/output";
+@import "components/popular/output";
 
 
 .visually-hidden {
@@ -25,8 +26,12 @@
   display: none;
 }
 
-.mr-20{
+.mr-20 {
   margin-right: 20px;
+}
+
+.pr-35{
+  padding-right: 35px;
 }
 
 @include tablet{
