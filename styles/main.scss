@@ -45,6 +45,10 @@
     margin: 0 auto;
   }
 
+  .tablet-mt-50{
+    margin-top: 50px;
+  }
+
   .tablet-mr-60{
     margin-right: 60px;
   }
@@ -61,6 +65,10 @@
 @include mobile{
   .mob-mt-10{
     margin-top: 10px;
+  }
+
+  .mob-mt-30{
+    margin-top: 30px;
   }
 
   .mob-display-none{
@@ -83,5 +91,9 @@
 
   .desk-mr-20{
     margin-right: 20px;
+  }
+
+  .desk-mt-75{
+    margin-top:75px;
   }
 }
