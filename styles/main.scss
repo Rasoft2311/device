@@ -15,6 +15,29 @@
 @import "components/services/output";
 @import "elements/main-button/output";
 
+//.main-header{
+//  font-size: $typography-h1;
+//  font-weight: bold;
+//  text-transform: uppercase;
+//  position: absolute;
+//  top: 5px;
+//  left: 70px;
+//}
+//
+//.main-header-link{
+//  color:$color-text-primary;
+//}
+//
+//.main-header-link:hover{
+//  color:$color-text-primary;
+//  opacity: 0.6;
+//}
+//
+//.main-header-link:active{
+//  color:$color-text-primary;
+//  opacity: 0.3;
+//}
+
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
