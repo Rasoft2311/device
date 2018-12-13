@@ -2203,8 +2203,14 @@ body {
   display: flex;
 }
 
-.main-products__more-button {
+.main-products__more-button.main-button {
   margin: 15px 0;
+}
+@media screen and (min-width: 1088px) {
+  .main-products__more-button.main-button {
+    padding-right: 40px;
+    padding-left: 40px;
+  }
 }
 
 .main-products__slider-fill {
