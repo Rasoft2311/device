@@ -249,24 +249,32 @@
         <h3 class="info-section__header">Контакты</h3>
         <p class="info-section__main-text info-section__main-text--max-520">Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
         <img class="info-section__location-img" src="images/map.jpg" alt="Магазин на карте">
+        <section class="modal-write display-none">
+          <div class="modal-write__content">
+            <button class="modal-write__close"></button>
+            <img src="images/map-big.jpg" alt="Где мы на карте в развернутом виде" class="modal-write__img">
+          </div>
+        </section>
         <button class="main-button info-section__button info-section__button--write"><span class="main-button__text">Напишите нам</span></button>
-        <section class="display-none">
-          <button>Закрыть</button>
-          <form>
-            <label>
-              <span>Ваше имя: </span>
-              <input type="text">
-            </label>
-            <label>
-              <span>Ваш e-mail: </span>
-              <input type="text">
-            </label>
-            <label>
-              <span>Текст письма: </span>
-              <textarea></textarea>
-            </label>
-            <button type="submit">Отправить</button>
-          </form>
+        <section class="modal-write display-none">
+          <div class="modal-write__content">
+            <button class="modal-write__close"></button>
+            <form class="modal-write__form">
+              <label class="modal-write__label">
+                <span class="modal-write__label-name">Ваше имя: </span>
+                <input class="modal-write__input" type="text" placeholder="Имя Фамилия">
+              </label>
+              <label class="modal-write__label">
+                <span class="modal-write__label-name">Ваш e-mail: </span>
+                <input class="modal-write__input" type="email" placeholder="email@example.com">
+              </label>
+              <label class="modal-write__label modal-write__label--textarea">
+                <span class="modal-write__label-name">Текст письма: </span>
+                <textarea class="modal-write__input modal-write__input--textarea" placeholder="В свободной форме"></textarea>
+              </label>
+              <button type="submit" class="main-button modal-write__submit-button"><span class="main-button__text">Отправить</span></button>
+            </form>
+          </div>
         </section>
       </section>
     </section>
