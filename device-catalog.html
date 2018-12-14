@@ -8,58 +8,77 @@
   <link rel="stylesheet" href="./styles/main.css"/>
 </head>
 <body>
-<header>
-  <p><a href="#">Device</a></p>
-  <nav>
+<header class="main-container header">
+  <p class="header__name"><a class="header__name-link" href="#">Device</a></p>
+  <nav class="header__search-nav">
     <form>
-      <span aria-label="Поиск"></span>
-      <input value="Поиск по сайту">
-      <button type="submit">Найти</button>
+      <div class="search-input">
+        <label for="search-input" class="search-input__label">
+          <span class="search-input__loop" aria-label="Поиск"></span>
+        </label>
+        <input id="search-input" class="search-input__input" placeholder="Поиск по сайту">
+        <button class="search-input__button display-none" type="submit">Найти</button>
+      </div>
     </form>
   </nav>
-  <section>
-    <h2>Личный кабинет</h2>
-    <p>
-      <span aria-label="Профиль"></span>
-      <a href="#">Войти</a>
-      <span>Валентин Петрович</span>
-      <button>Выйти</button>
+  <section class="personal-area header__personal-area">
+    <h2 class="visually-hidden">Личный кабинет</h2>
+    <p class="personal-area__profile">
+      <a class="display-none personal-area__button personal-area__button--session" href="#">
+        <span class="personal-area__profile-img" aria-label="Профиль"></span>
+        Войти
+      </a>
+      <a href="#" class="personal-area__name personal-area__button personal-area__button--session">
+        <span class="personal-area__profile-img" aria-label="Профиль"></span>
+        Валентин Петрович
+      </a>
+      <button class="personal-area__button personal-area__button--session">
+        Выйти
+      </button>
     </p>
-    <p>
-      <span aria-label="Сравнение"></span>
-      <button>Сравнить</button>
-    </p>
-    <p>
-      <span aria-label="Корзина"></span>
-      <button>Корзина</button>
-    </p>
+    <button class="personal-area__button personal-area__button--posibilities">
+      <span class="personal-area__compare-img" aria-label="Сравнение"></span>
+      Сравнить
+    </button>
+    <button class="personal-area__button personal-area__button--posibilities">
+      <span class="personal-area__cart-img" aria-label="Корзина"></span>
+      Корзина
+    </button>
   </section>
-  <nav>
-    <ul>
-      <li>
-        <button>Каталог товаров <span aria-label="Открыть каталог"></span></button>
-        <ul>
-          <li><a href="#">Виртуальная реальность</a></li>
-          <li><a href="#">Моноподы для селфи</a></li>
-          <li><a href="#">Экшн-камеры</a></li>
-          <li><a href="#">Фитнес-браслеты</a></li>
-          <li><a href="#">Умные часы</a></li>
-          <li><a href="#">Квадрокоптеры</a></li>
+  <nav class="header__nav">
+    <ul class="header__list">
+      <li class="header__catalog mob-mt-10">
+        <button class="header__catalog-button">Каталог товаров <span class="header__catalog-icon" aria-label="Открыть каталог"></span></button>
+        <ul class="mob-display-none header__catalog-list">
+          <li class="tablet-mr-60">
+            <ul>
+              <li><a class="header__link" href="#">Виртуальная реальность</a></li>
+              <li><a class="header__link" href="#">Моноподы для селфи</a></li>
+              <li><a class="header__link" href="#">Экшн-камеры</a></li>
+            </ul>
+          </li>
+          <li class="tablet-mr-76">
+            <ul>
+              <li><a class="header__link" href="#">Фитнес-браслеты</a></li>
+              <li><a class="header__link" href="#">Умные часы</a></li>
+            </ul>
+          </li>
+          <li><a class="header__link" href="#">Квадрокоптеры</a></li>
         </ul>
       </li>
-      <li>
-        <a href="#">Доставка</a>
+      <li class="header__delivery mob-mt-10">
+        <a class="header__link" href="#">Доставка</a>
       </li>
-      <li>
-        <a href="#">Гарантия</a>
+      <li class="header__warranty mob-mt-10">
+        <a class="header__link" href="#">Гарантия</a>
       </li>
-      <li>
-        <a href="#">Контакты</a>
+      <li class="header__contacts mob-mt-10">
+        <a class="header__link" href="#">Контакты</a>
       </li>
     </ul>
   </nav>
 </header>
-<main>
+<main class="catalog-main">
   <h1>Моноподы для селфи</h1>
   <ul>
     <li><a href="#">Главная <span aria-label="Стрелка вправо"></span></a></li>
