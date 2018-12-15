@@ -1,0 +1,30 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.sort-section{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: $color-background-login-form-hover;
+  padding: 10px;
+
+  @include tablet{
+    padding: 10px 10px 10px 25px;
+  }
+
+  @media screen and (min-width: 1180px) {
+    padding: 0 0 0 72px;
+  }
+}
+
+
+
+.sort-section__sort-fieldset{
+  flex-grow: 1;
+}
+
+
+
+
+
+
+

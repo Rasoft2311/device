@@ -1,2 +1,155 @@
 @import "../../units/colors/utils";
 @import "../../units/typography/utils";
+
+.catalog-main{
+
+  @include mobile{
+    padding-top:20px;
+  }
+
+  @include tablet{
+    padding-top:40px;
+  }
+}
+
+.catalog-main__header{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-h2;
+  font-weight: bold;
+  line-height: 36px;
+  color:$color-text-primary;
+
+  @include mobile{
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  @include tablet{
+    padding-left:25px;
+    margin-bottom:20px;
+  }
+
+  @include desktop{
+    margin-bottom:25px;
+  }
+
+}
+
+.catalog-main__path-list{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: $typography-text-small;
+  line-height: 24px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile{
+    padding-left:20px;
+    margin-bottom:20px;
+  }
+
+  @include tablet{
+    padding-left:25px;
+    margin-bottom:30px;
+  }
+
+  @include desktop{
+    margin-bottom:50px;
+  }
+}
+
+.catalog-main__path-list-item--with-arrow::after{
+  content: '';
+  display: inline-block;
+  margin: 0 15px;
+  width: 4px;
+  height: 7px;
+  background-image: url("../icons/nav-arrow.svg");
+}
+
+.catalog-main__path-list-link{
+  color:$color-text-primary;
+}
+
+.catalog-main__path-list-link:hover{
+  color:$color-text-primary;
+  opacity: 0.6;
+}
+
+.catalog-main__path-list-link:active{
+  color:$color-text-primary;
+  opacity: 0.3;
+}
+
+.catalog-main__products-section{
+  @include tablet{
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 70px 20px;
+  }
+
+  @media screen and (min-width: 1180px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    padding: 70px 0 77px 72px;
+  }
+}
+
+.catalog-main__product-list{
+  @include tablet{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media screen and (min-width: 1180px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.catalog-main__wrap-section{
+  position: relative;
+}
+
+.catalog-main__wrap-section::before{
+  content:'';
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width:calc(50% - 319px);
+  @include tablet{
+    background-color: $color-background-product;
+  }
+}
+
+.catalog-main__wrap-container{
+  @include tablet{
+    display: flex;
+  }
+}
+
+.catalog-main__filters{
+  @include tablet{
+    flex-basis: 280px;
+    padding-left: 45px;
+    flex-shrink: 0;
+  }
+
+  @media screen and (min-width: 1180px) {
+    flex-basis: 328px;
+    padding-left: 60px;
+    flex-shrink: 0;
+  }
+}
+
+.catalog-main__products-nav{
+  @include tablet{
+    flex-basis: 100%;
+  }
+
+}

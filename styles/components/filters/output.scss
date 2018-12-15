@@ -1,0 +1,187 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.filters{
+  position: relative;
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-xl;
+  line-height: 18px;
+  color:$color-text-primary;
+
+  @include tablet{
+    background-color: $color-background-product;
+  }
+}
+
+.filters--first{
+  @include tablet{
+    background-color: $color-background-login-form-hover;
+  }
+}
+
+.filters--first::before{
+  content:'';
+  position: absolute;
+  left:0;
+  top:0;
+  height: 100%;
+  width:calc(50% - 300px);
+  @media screen and (min-width: 1180px){
+    background-color: $color-background-filter;
+  }
+}
+
+.filters__wrap{
+  @include mobile{
+    background-color: $color-background-product;
+  }
+  position: relative;
+
+  @include tablet{
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+.filters__header{
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: $color-background-filter;
+  padding:10px 0;
+  @include mobile{
+    text-align: center;
+  }
+
+  @include tablet{
+    padding:25px 0 25px 45px;
+    flex-basis: 280px;
+  }
+
+  @media screen and (min-width: 1180px) {
+    padding:25px 0 25px 60px;
+    flex-basis: 328px;
+  }
+}
+
+.filters__form{
+  padding:50px 0 20px 0;
+  background-color: $color-background-product;
+  @include mobile{
+    text-align: center;
+  }
+
+  @include tablet{
+    padding:40px 68px 40px 0;
+  }
+
+}
+
+.filters__legend{
+  position: relative;
+  padding-top:50px;
+  font-weight: bold;
+  margin-bottom:20px;
+}
+
+.filters__legend:before{
+  content: '';
+  position: absolute;
+  left:0;
+  right:0;
+  top:30px;
+  height: 2px;
+  background-color: $color-text-primary;
+}
+
+.filters__fieldset{
+  display: flex;
+  flex-direction: column;
+  @include mobile{
+    padding: 0 20px;
+  }
+
+
+}
+
+.filters__fieldset-label{
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: $typography-text-small;
+  line-height: 40px;
+  margin-left:35px;
+  position: relative;
+  text-align: start;
+  min-width: 80px;
+  @include mobile{
+    align-self: center;
+  }
+}
+
+.filters__input-range{
+  margin-left:auto;
+  margin-right: auto;
+  margin-top:20px;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1180px) {
+    margin-bottom:30px;
+  }
+
+}
+
+.filters__fieldset-checkbox{
+  position: absolute;
+  left:-35px;
+  transform: translateY(-50%);
+  top: 50%;
+  display: inline-block;
+  width:23px;
+  height: 23px;
+  background-image: url("../icons/checkbox-off.svg");
+}
+
+.filters__fieldset-input:checked ~.filters__fieldset-checkbox{
+  width: 27px;
+  background-image: url("../icons/checkbox-on.svg");
+}
+
+.filters__fieldset-radio{
+  position: absolute;
+  left:-35px;
+  transform: translateY(-50%);
+  top: 50%;
+  display: inline-block;
+  width:25px;
+  height: 25px;
+  background-image: url("../icons/radio-off.svg");
+}
+
+.filters__fieldset-radio--true{
+  background-image: url("../icons/radio-on.svg");
+}
+
+.filters__submit-button{
+  margin-top: 25px;
+
+  @include tablet{
+    margin-top:45px;
+  }
+
+}
+
+.filters__sort-section{
+  text-align: start;
+  @include mobile{
+    margin-top: 30px;
+  }
+
+  @include tablet{
+    flex-grow: 1;
+  }
+
+
+}
+
+
+
+

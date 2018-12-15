@@ -1,0 +1,61 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.products-nav{
+
+  background-color: $color-background-login-form-hover;
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-xl;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  color:$color-text-primary;
+  display: flex;
+  @include mobile{
+    padding:10px;
+  }
+
+  @include tablet{
+    margin: 0 10px;
+    padding:30px;
+  }
+
+
+
+  @media screen and (min-width: 1180px){
+    margin: 0;
+  }
+}
+
+.products-nav__list{
+  display: flex;
+  margin:0 auto;
+}
+
+.products-nav__list-item{
+  font-weight: normal;
+  margin-right: 25px;
+}
+
+.products-nav__list-item:last-child{
+  margin-right: 0;
+}
+
+.products-nav__list-item--active{
+  font-weight: bold;
+}
+
+.products-nav__link{
+  color:$color-text-primary;
+}
+
+.products-nav__link:hover{
+  color:$color-text-primary;
+  opacity: 0.6;
+}
+
+.products-nav__link:active{
+  color:$color-text-primary;
+  opacity: 0.3;
+}
+

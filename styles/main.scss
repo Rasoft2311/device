@@ -15,6 +15,12 @@
 @import "components/services/output";
 @import "elements/main-button/output";
 @import "components/catalog-main/output";
+@import "components/filters/output";
+@import "elements/input-range/output";
+@import "components/sort-fieldset/output";
+@import "components/sort-section/output";
+@import "components/product-list/output";
+@import "components/products-nav/output";
 
 
 //.main-header{
@@ -39,6 +45,10 @@
 //  color:$color-text-primary;
 //  opacity: 0.3;
 //}
+
+fieldset{
+  border: none;
+}
 
 .visually-hidden {
   position: absolute;
@@ -67,7 +77,8 @@
   }
   .main-container{
     max-width: 1160px;
-    margin: 0 auto;
+    margin-left:auto;
+    margin-right: auto;
   }
 
   .tablet-mt-50{
@@ -102,6 +113,10 @@
 }
 
 @include desktop{
+  .desk-pl-60{
+    padding-left:60px;
+  }
+
   .desktop-text-modifier{
     padding-right: 108px;
   }
