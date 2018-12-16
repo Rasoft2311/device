@@ -1,0 +1,30 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.order-fieldset__label:last-child{
+  @media screen and (min-width: 1180px) {
+    margin-left:15px;
+  }
+}
+
+.order-fieldset__arrow{
+  cursor: pointer;
+  path{
+    fill:$color-filter-arrow-active;
+    opacity: 0.2;
+  }
+}
+
+.order-fieldset__arrow:hover{
+  path{
+    fill:$color-filter-arrow-active;
+    opacity: 0.4;
+  }
+}
+
+.order-fieldset__input:checked + .order-fieldset__arrow{
+  path{
+    fill:$color-filter-arrow-active;
+    opacity: 1;
+  }
+}

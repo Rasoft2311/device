@@ -116,7 +116,7 @@
                 <fieldset class="order-fieldset">
                     <!--<legend class="visually-hidden">Порядок</legend>-->
                     <label class="order-fieldset__label widescreen-mr-10">
-                        <input form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
+                        <input checked form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
                                name="order" value="asc" aria-label="По возрастанию"/>
                         <svg class="order-fieldset__arrow" width="11" height="10" viewBox="0 0 11 10">
                             <path fill="#231F20" d="M5.5 0L0 10h11z"/>
@@ -126,7 +126,7 @@
                         <input form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
                                name="order" value="desc" aria-label="По убыванию"/>
                         <svg class="order-fieldset__arrow" width="11" height="10" viewBox="0 0 11 10">
-                            <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+                            <path fill="#231F20" d="M5.5 10L0 0h11"/>
                         </svg>
                     </label>
                 </fieldset>
@@ -261,14 +261,14 @@
                 </ul>
                 <nav class="products-nav catalog-main__products-nav">
                     <h2 class="visually-hidden">Навигация по найденым товарам</h2>
-                    <a class="products-nav__one-step products-nav__link" href="#">Назад</a>
+                    <a class="products-nav__one-step products-nav__link" href="#"><span class="products-nav__one-step-text">Назад</span></a>
                     <ul class="products-nav__list">
                         <li class="products-nav__list-item products-nav__list-item--active"><a class="products-nav__link"
                                                                                                href="#">1</a></li>
                         <li class="products-nav__list-item"><a class="products-nav__link" href="#">2</a></li>
                         <li class="products-nav__list-item"><a class="products-nav__link" href="#">3</a></li>
                     </ul>
-                    <a class="products-nav__one-step products-nav__link" href="#">Вперед</a>
+                    <a class="products-nav__one-step products-nav__link" href="#"><span class="products-nav__one-step-text">Вперед</span></a>
                 </nav>
             </section>
         </div>

@@ -89,6 +89,7 @@
 }
 
 .product-list__compare-button{
+  opacity: 0.5;
   cursor: pointer;
   border: none;
   padding: 0;
@@ -99,4 +100,12 @@
   font-size: $typography-text-xs;
   line-height: 45px;
   color:$color-text-primary;
+}
+
+.product-list__compare-button:hover{
+  opacity: 1;
+}
+
+.product-list__compare-button:active{
+  opacity: 0.2;
 }

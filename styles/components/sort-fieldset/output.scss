@@ -22,7 +22,11 @@
 }
 
 .sort-fieldset__label{
-  opacity: 0.3;
+
+  .sort-fieldset__type{
+    opacity: 0.3;
+  }
+
   font-family: "Open Sans", sans-serif;
   font-size: $typography-text-small;
   line-height: 18px;
@@ -42,16 +46,19 @@
 }
 
 .sort-fieldset__label:hover{
-  color: $color-text-primary;
-  opacity: 0.6;
+
+  .sort-fieldset__type{
+    color:$color-text-primary;
+    opacity: 0.6;
+  }
 }
 
 .sort-fieldset__label:active{
-  color:$color-text-primary;
-  opacity: 1;
+
 
   .sort-fieldset__type{
-    border-bottom: none;
+    color:$color-text-primary;
+    opacity: 1;
   }
 }
 
@@ -60,8 +67,3 @@
   color:$color-text-primary;
 }
 
-.order-fieldset__label:last-child{
-  @media screen and (min-width: 1180px) {
-    margin-left:15px;
-  }
-}

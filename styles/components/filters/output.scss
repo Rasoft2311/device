@@ -104,6 +104,7 @@
 }
 
 .filters__fieldset-label{
+  cursor: pointer;
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
   font-size: $typography-text-small;
@@ -126,7 +127,6 @@
   @media screen and (min-width: 1180px) {
     margin-bottom:30px;
   }
-
 }
 
 .filters__fieldset-checkbox{
@@ -140,10 +140,18 @@
   background-image: url("../icons/checkbox-off.svg");
 }
 
+.filters__fieldset-label:hover{
+  .filters__fieldset-checkbox{
+    opacity: 0.6;
+  }
+}
+
 .filters__fieldset-input:checked ~.filters__fieldset-checkbox{
   width: 27px;
   background-image: url("../icons/checkbox-on.svg");
 }
+
+
 
 .filters__fieldset-radio{
   position: absolute;
