@@ -1,0 +1,27 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.logos__list{
+  display: flex;
+  flex-wrap: wrap;
+
+  @include mobile{
+    justify-content: space-around;
+  }
+
+  @include desktop{
+    justify-content: space-between;
+  }
+}
+
+.logos__list-item{
+  @include tablet{
+    flex-basis: 50%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @include desktop{
+    flex-basis: auto;
+  }
+}
