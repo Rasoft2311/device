@@ -58,6 +58,10 @@
     margin-top: 50px;
   }
 
+  .tablet-mb-50{
+    margin-bottom: 50px;
+  }
+
   .tablet-mr-60{
     margin-right: 60px;
   }
@@ -76,6 +80,10 @@
     margin-top: 50px;
   }
 
+  .mob-mb-50{
+    margin-bottom: 50px;
+  }
+
   .mob-mt-10{
     margin-top: 10px;
   }
@@ -92,6 +100,10 @@
 @include desktop{
   .desk-mt-150{
     margin-top: 150px;
+  }
+
+  .desk-mb-100{
+    margin-bottom:100px;
   }
 
   .desktop-text-modifier{
