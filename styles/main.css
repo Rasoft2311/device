@@ -1922,6 +1922,16 @@ body {
   }
 }
 
+.personal-area--footer .personal-area__profile {
+  color: #FFF;
+}
+.personal-area--footer .personal-area__button {
+  color: #FFF;
+}
+.personal-area--footer .personal-area__img path {
+  fill: #ffc600;
+}
+
 .personal-area__profile {
   display: flex;
   justify-content: center;
@@ -1946,31 +1956,14 @@ body {
   }
 }
 
-.personal-area__profile-img {
+.personal-area__img {
   display: inline-block;
   margin-right: 10px;
-  width: 13px;
-  height: 12px;
-  background-image: url("../icons/user.svg");
-}
-
-.personal-area__compare-img {
-  display: inline-block;
-  margin-right: 10px;
-  width: 10px;
-  height: 10px;
-  background-image: url("../icons/compare.svg");
-}
-
-.personal-area__cart-img {
-  display: inline-block;
-  margin-right: 10px;
-  width: 12px;
-  height: 12px;
-  background-image: url("../icons/cart.svg");
 }
 
 .personal-area__name {
+  display: flex;
+  align-items: center;
   margin-right: 20px;
 }
 
@@ -3128,6 +3121,201 @@ body {
     transform: none;
     object-fit: cover;
     object-position: center top;
+  }
+}
+
+.footer {
+  background-color: #464646;
+}
+
+@media screen and (max-width: 767px) {
+  .footer__wrap {
+    text-align: center;
+    padding: 10px;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .footer__wrap {
+    padding: 60px 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__wrap {
+    padding: 60px 0;
+  }
+}
+
+.footer__link {
+  color: #000;
+}
+
+.footer__link:hover {
+  color: #000;
+  opacity: 0.6;
+}
+
+.footer__link:active {
+  color: #000;
+  opacity: 0.3;
+}
+
+.footer__name .footer__link {
+  color: #ffc600;
+  font-size: 47px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 48px;
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__personal-area-profile {
+    margin-right: 30px;
+  }
+}
+
+.footer__company-info {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  line-height: 30px;
+  color: #FFF;
+}
+@media screen and (max-width: 767px) {
+  .footer__company-info {
+    padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__services-list {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__services-list-item {
+    border-bottom: 4px solid #ffc600;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .footer__services-list-item {
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .footer__services-list-item {
+    margin-right: 35px;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__services-list-item:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer__services-list-item:first-child {
+    border-top: 4px solid #ffc600;
+  }
+}
+
+.footer__services-list .footer__link {
+  font-family: "Gilroy", sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 24px;
+  color: #FFF;
+}
+@media screen and (max-width: 767px) {
+  .footer__services-list .footer__link {
+    padding: 10px 0;
+    display: block;
+  }
+}
+
+.footer__socials-list {
+  display: flex;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .footer__socials-list {
+    margin: 10px 0 15px 0;
+  }
+}
+@media screen and (min-width: 768px), print {
+  .footer__socials-list {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.footer__socials-list-item {
+  margin-right: 20px;
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__social-link {
+    opacity: 0.3;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__social-link:hover {
+    opacity: 0.6;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__social-link:active {
+    opacity: 0.2;
+  }
+}
+
+.footer__socials-list-item:last-child {
+  margin-right: 0;
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__first-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__second-line {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__decoration-line {
+    width: 80px;
+    height: 7px;
+    background-color: #ffc600;
+  }
+}
+
+.footer__htmlacademy:hover {
+  opacity: 0.6;
+}
+
+.footer__htmlacademy:active {
+  opacity: 0.3;
+}
+
+@media screen and (min-width: 768px), print {
+  .footer__third-line {
+    display: flex;
+    align-items: center;
   }
 }
 
