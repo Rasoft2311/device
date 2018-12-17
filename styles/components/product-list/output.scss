@@ -1,0 +1,119 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.product-list{
+  @include mobile{
+    padding:40px 20px;
+  }
+
+  @include tablet{
+
+  }
+
+  @media screen and (min-width: 1180px) {
+    padding: 70px 0 0 72px;
+  }
+}
+
+.product-list__item{
+
+  @include mobile{
+    margin: 0 auto 40px auto;
+    max-width: 360px;
+  }
+
+  @include tablet{
+    padding: 0 10px;
+    margin-bottom: 50px;
+  }
+
+  @media screen and (min-width: 1180px) {
+    padding: 0;
+  }
+}
+
+.product-list__item:last-child{
+  @include mobile{
+    margin-bottom: 0;
+  }
+}
+
+.product-list__picture-section{
+  position: relative;
+}
+
+.product-list__picture-section:hover{
+  .product-list__action{
+    display: block;
+  }
+
+  .product-list__picture{
+    opacity: 0.7;
+  }
+}
+
+.product-list__action{
+  display: none;
+  position: absolute;
+  top:50%;
+  left:0;
+  right: 0;
+  transform: translateY(-25%);
+  text-align: center;
+}
+
+.product-list__text{
+  font-family: "Gilroy", sans-serif;
+  font-size: $typography-text-xl;
+  line-height: 24px;
+  color:$color-text-primary;
+  display: flex;
+  align-items: flex-start;
+
+  @include mobile{
+    margin-top:15px;
+  }
+
+  @media screen and (min-width: 1180px) {
+    margin-top: 27px;
+  }
+
+}
+
+.product-list__name{
+  font-weight: bold;
+  flex-basis: 70%;
+
+}
+
+.product-list__name--basis-64{
+  flex-basis: 64%;
+}
+
+.product-list__price{
+  font-size: $typography-text-large;
+  margin-left: auto;
+
+}
+
+.product-list__compare-button{
+  opacity: 0.5;
+  cursor: pointer;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 100;
+  font-size: $typography-text-xs;
+  line-height: 45px;
+  color:$color-text-primary;
+}
+
+.product-list__compare-button:hover{
+  opacity: 1;
+}
+
+.product-list__compare-button:active{
+  opacity: 0.2;
+}

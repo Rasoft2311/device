@@ -16,10 +16,21 @@
 @import "elements/main-button/output";
 @import "components/catalog-main/output";
 @import "components/logos/output";
-
 @import "components/info-section/output";
 @import "components/modal-write/output";
 @import "components/footer/output";
+@import "components/filters/output";
+@import "elements/input-range/output";
+@import "components/sort-fieldset/output";
+@import "components/sort-section/output";
+@import "components/product-list/output";
+@import "components/products-nav/output";
+@import "components/order-fieldset/output";
+
+fieldset{
+  border: none;
+}
+
 
 
 .visually-hidden {

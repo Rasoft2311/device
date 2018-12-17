@@ -1,0 +1,87 @@
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+.display-none{
+  display: none;
+}
+
+.mr-20 {
+  margin-right: 20px;
+}
+
+.pr-35{
+  padding-right: 35px;
+}
+
+@include tablet{
+
+  .header--large-height{
+    padding-bottom:163px;
+  }
+  .main-container{
+    max-width: 1160px;
+    margin-left:auto;
+    margin-right: auto;
+  }
+
+  .tablet-mt-50{
+    margin-top: 50px;
+  }
+
+  .tablet-mr-60{
+    margin-right: 60px;
+  }
+
+  .tablet-mr-76{
+    margin-right: 76px;
+  }
+
+  .tablet-mt-100{
+    margin-top:100px;
+  }
+}
+
+@include mobile{
+  .mob-mt-10{
+    margin-top: 10px;
+  }
+
+  .mob-mt-30{
+    margin-top: 30px;
+  }
+
+  .mob-display-none{
+    display: none;
+  }
+}
+
+@include desktop{
+  .desk-pl-60{
+    padding-left:60px;
+  }
+
+  .desktop-text-modifier{
+    padding-right: 108px;
+  }
+
+  .desk-ml-85{
+    margin-left: 85px;
+  }
+
+  .desk-ml-30{
+    margin-left: 30px;
+  }
+
+  .desk-mr-20{
+    margin-right: 20px;
+  }
+
+  .desk-mt-75{
+    margin-top:75px;
+  }
+}

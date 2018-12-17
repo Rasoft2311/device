@@ -1,0 +1,69 @@
+@import "../../units/colors/utils";
+@import "../../units/typography/utils";
+
+.sort-fieldset__name{
+  font-family: "Gilroy", sans-serif;
+  font-weight: bold;
+  color:$color-text-primary;
+  line-height: 24px;
+  font-size: $typography-text-large;
+  text-transform: uppercase;
+
+
+  @include mobile {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  @include tablet {
+    margin-right: 40px;
+  }
+
+}
+
+.sort-fieldset__label{
+
+  .sort-fieldset__type{
+    opacity: 0.3;
+  }
+
+  font-family: "Open Sans", sans-serif;
+  font-size: $typography-text-small;
+  line-height: 18px;
+  cursor: pointer;
+  color:$color-text-primary;
+  @include mobile {
+    margin-right: 20px;
+  }
+
+  @include tablet{
+    margin-right: 25px;
+  }
+}
+
+.sort-fieldset__label:last-child{
+  margin-right: 0;
+}
+
+.sort-fieldset__label:hover{
+
+  .sort-fieldset__type{
+    color:$color-text-primary;
+    opacity: 0.6;
+  }
+}
+
+.sort-fieldset__label:active{
+
+
+  .sort-fieldset__type{
+    color:$color-text-primary;
+    opacity: 1;
+  }
+}
+
+.sort-fieldset__input:checked + .sort-fieldset__type{
+  opacity: 1;
+  color:$color-text-primary;
+}
+
