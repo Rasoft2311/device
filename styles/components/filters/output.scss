@@ -44,6 +44,7 @@
 }
 
 .filters__header{
+
   font-weight: bold;
   text-transform: uppercase;
   background-color: $color-background-filter;
@@ -53,24 +54,48 @@
   }
 
   @include tablet{
-    padding:25px 0 25px 45px;
+    min-height: 70px;
+    position: relative;
+    padding:25px 0 25px 25px;
     flex-basis: 280px;
   }
 
   @media screen and (min-width: 1180px) {
-    padding:25px 0 25px 60px;
+    padding:25px 0;
     flex-basis: 328px;
   }
 }
 
+.filters__header::before{
+  @media screen and (min-width: 1180px) {
+    content: '';
+    position: absolute;
+    right:0;
+    left:-20000px;
+    top:0;
+    height: 100%;
+    background-color: $color-background-filter;
+  }
+
+}
+
+.filters__header-text{
+  position: relative;
+}
+
 .filters__form{
-  padding:50px 0 20px 0;
-  background-color: $color-background-product;
+  padding: 4px 0 40px 0;
+
   @include mobile{
+    background-color: $color-background-product;
     text-align: center;
   }
 
-  @include tablet{
+  @include tablet {
+    padding:40px 38px 40px 25px;
+  }
+
+  @media screen and (min-width: 1180px) {
     padding:40px 68px 40px 0;
   }
 
@@ -83,7 +108,7 @@
   margin-bottom:20px;
 }
 
-.filters__legend:before{
+.filters__legend::before{
   content: '';
   position: absolute;
   left:0;
@@ -178,15 +203,28 @@
 }
 
 .filters__sort-section{
+  position: relative;
   text-align: start;
   @include mobile{
-    margin-top: 30px;
+
   }
 
   @include tablet{
+    min-height: 70px;
     flex-grow: 1;
   }
+}
 
+.filters__sort-section::before{
+  @media screen and (min-width: 1180px) {
+    content: '';
+    position: absolute;
+    left:0;
+    right: -20000px;
+    top:0;
+    bottom: 0;
+    background-color: $color-background-login-form-hover;
+  }
 
 }
 

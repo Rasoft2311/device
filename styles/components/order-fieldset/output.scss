@@ -1,7 +1,18 @@
 @import "../../units/colors/utils";
 @import "../../units/typography/utils";
 
+.order-fieldset{
+  @include tablet{
+    position: relative;
+  }
+}
+
 .order-fieldset__label:last-child{
+  margin-left: 10px;
+  @include tablet{
+    margin-left:10px;
+  }
+
   @media screen and (min-width: 1180px) {
     margin-left:15px;
   }

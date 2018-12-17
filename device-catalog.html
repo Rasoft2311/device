@@ -90,53 +90,10 @@
         <li class="catalog-main__path-list-item"><a class="catalog-main__path-list-link" href="#">Моноподы для
             селфи </a></li>
     </ul>
-    <aside class="filters filters--first">
-        <div class="filters__wrap main-container">
-            <h2 class="filters__header">Фильтр:</h2>
-            <div class="sort-section filters__sort-section">
-                <h2 class="visually-hidden">Сортировка</h2>
-                <fieldset class="sort-fieldset sort-section__sort-fieldset">
-                    <span class="sort-fieldset__name">Сортировка:</span>
-                    <label class="sort-fieldset__label">
-                        <input class="visually-hidden sort-fieldset__input" type="radio" name="sort" value="price"
-                               form="product-parametrs-form" checked>
-                        <span class="sort-fieldset__type">По цене</span>
-                    </label>
-                    <label class="sort-fieldset__label">
-                        <input class="visually-hidden sort-fieldset__input" type="radio" name="sort" value="type"
-                               form="product-parametrs-form">
-                        <span class="sort-fieldset__type">По типу</span>
-                    </label>
-                    <label class="sort-fieldset__label">
-                        <input class="visually-hidden sort-fieldset__input" type="radio" name="sort" value="popularity"
-                               form="product-parametrs-form">
-                        <span class="sort-fieldset__type">По рейтингу</span>
-                    </label>
-                </fieldset>
-                <fieldset class="order-fieldset">
-                    <!--<legend class="visually-hidden">Порядок</legend>-->
-                    <label class="order-fieldset__label widescreen-mr-10">
-                        <input checked form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
-                               name="order" value="asc" aria-label="По возрастанию"/>
-                        <svg class="order-fieldset__arrow" width="11" height="10" viewBox="0 0 11 10">
-                            <path fill="#231F20" d="M5.5 0L0 10h11z"/>
-                        </svg>
-                    </label>
-                    <label class="order-fieldset__label">
-                        <input form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
-                               name="order" value="desc" aria-label="По убыванию"/>
-                        <svg class="order-fieldset__arrow" width="11" height="10" viewBox="0 0 11 10">
-                            <path fill="#231F20" d="M5.5 10L0 0h11"/>
-                        </svg>
-                    </label>
-                </fieldset>
-            </div>
-        </div>
-
-    </aside>
     <div class="catalog-main__wrap-section">
         <div class="catalog-main__wrap-container main-container">
             <aside class="filters catalog-main__filters">
+                <h2 class="filters__header"><span class="filters__header-text">Фильтр:</span></h2>
                 <form class="filters__form" id="product-parametrs-form">
                     <div class="filters__fieldset">
                         <p class="filters__legend">Стоимость</p>
@@ -197,6 +154,44 @@
                 </form>
             </aside>
             <section class="catalog-main__products-section">
+                <div class="sort-section filters__sort-section">
+                    <h2 class="visually-hidden">Сортировка</h2>
+                    <fieldset class="sort-fieldset sort-section__sort-fieldset">
+                        <span class="sort-fieldset__name">Сортировка:</span>
+                        <label class="sort-fieldset__label">
+                            <input class="visually-hidden sort-fieldset__input" type="radio" name="sort" value="price"
+                                   form="product-parametrs-form" checked>
+                            <span class="sort-fieldset__type">По цене</span>
+                        </label>
+                        <label class="sort-fieldset__label">
+                            <input class="visually-hidden sort-fieldset__input" type="radio" name="sort" value="type"
+                                   form="product-parametrs-form">
+                            <span class="sort-fieldset__type">По типу</span>
+                        </label>
+                        <label class="sort-fieldset__label">
+                            <input class="visually-hidden sort-fieldset__input" type="radio" name="sort" value="popularity"
+                                   form="product-parametrs-form">
+                            <span class="sort-fieldset__type">По рейтингу</span>
+                        </label>
+                    </fieldset>
+                    <fieldset class="order-fieldset">
+                        <!--<legend class="visually-hidden">Порядок</legend>-->
+                        <label class="order-fieldset__label widescreen-mr-10">
+                            <input checked form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
+                                   name="order" value="asc" aria-label="По возрастанию"/>
+                            <svg class="order-fieldset__arrow" width="11" height="10" viewBox="0 0 11 10">
+                                <path fill="#231F20" d="M5.5 0L0 10h11z"/>
+                            </svg>
+                        </label>
+                        <label class="order-fieldset__label">
+                            <input form="product-parametrs-form" class="visually-hidden order-fieldset__input" type="radio"
+                                   name="order" value="desc" aria-label="По убыванию"/>
+                            <svg class="order-fieldset__arrow" width="11" height="10" viewBox="0 0 11 10">
+                                <path fill="#231F20" d="M5.5 10L0 0h11"/>
+                            </svg>
+                        </label>
+                    </fieldset>
+                </div>
                 <ul class="product-list catalog-main__product-list">
                     <li class="product-list__item">
                         <div class="product-list__picture-section">

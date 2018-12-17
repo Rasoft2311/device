@@ -5,14 +5,15 @@
   display: flex;
   flex-wrap: wrap;
   background-color: $color-background-login-form-hover;
+  align-items: center;
   padding: 10px;
 
   @include tablet{
-    padding: 10px 10px 10px 25px;
+    padding:22px 20px 21px 42px;
   }
 
   @media screen and (min-width: 1180px) {
-    padding: 0 0 0 72px;
+    padding: 22px 0 21px 72px;
   }
 }
 
@@ -20,6 +21,10 @@
 
 .sort-section__sort-fieldset{
   flex-grow: 1;
+
+  @include tablet{
+    position: relative;
+  }
 }
 
 
