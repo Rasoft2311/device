@@ -5,6 +5,7 @@
 
 @import "units/typography/output";
 @import "units/base/output";
+@import "units/helpers/output";
 @import "components/header/output";
 @import "elements/search-input/output";
 @import "components/personal-area/output";
@@ -15,34 +16,9 @@
 @import "elements/main-button/output";
 @import "components/catalog-main/output";
 @import "components/logos/output";
-@import "units/helpers/output";
+
 @import "components/info-section/output";
 @import "components/modal-write/output";
-
-//.main-header{
-//  font-size: $typography-h1;
-//  font-weight: bold;
-//  text-transform: uppercase;
-//  position: absolute;
-//  top: 5px;
-//  left: 70px;
-//}
-//
-//.main-header-link{
-//  color:$color-text-primary;
-//}
-//
-//.main-header-link:hover{
-//  color:$color-text-primary;
-//  opacity: 0.6;
-//}
-//
-//.main-header-link:active{
-//  color:$color-text-primary;
-//  opacity: 0.3;
-//}
-
-
 
 .visually-hidden {
   position: absolute;
@@ -56,8 +32,12 @@
   display: none;
 }
 
-.mr-20{
+.mr-20 {
   margin-right: 20px;
+}
+
+.pr-35{
+  padding-right: 35px;
 }
 
 @include tablet{
@@ -74,6 +54,10 @@
     margin: 0 auto;
   }
 
+  .tablet-mt-50{
+    margin-top: 50px;
+  }
+
   .tablet-mr-60{
     margin-right: 60px;
   }
@@ -81,11 +65,23 @@
   .tablet-mr-76{
     margin-right: 76px;
   }
+
+  .tablet-mt-100{
+    margin-top:100px;
+  }
 }
 
 @include mobile{
+  .mob-mt-50{
+    margin-top: 50px;
+  }
+
   .mob-mt-10{
     margin-top: 10px;
+  }
+
+  .mob-mt-30{
+    margin-top: 30px;
   }
 
   .mob-display-none{
@@ -93,17 +89,28 @@
   }
 }
 
-@include desktop {
-  .desktop-text-modifier {
+@include desktop{
+  .desk-mt-150{
+    margin-top: 150px;
+  }
+
+  .desktop-text-modifier{
     padding-right: 108px;
   }
 
-  .desk-ml-85 {
+  .desk-ml-85{
     margin-left: 85px;
   }
 
-  .desk-ml-30 {
+  .desk-ml-30{
     margin-left: 30px;
   }
-}
 
+  .desk-mr-20{
+    margin-right: 20px;
+  }
+
+  .desk-mt-75{
+    margin-top:75px;
+  }
+}

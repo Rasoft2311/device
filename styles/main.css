@@ -2281,11 +2281,8 @@ body {
 }
 
 .main-button {
-<<<<<<< HEAD
   min-width: 160px;
   text-align: center;
-=======
->>>>>>> info-section
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -2350,7 +2347,6 @@ body {
   height: 100%;
 }
 
-<<<<<<< HEAD
 .popular__list {
   display: flex;
   overflow: auto;
@@ -2792,7 +2788,9 @@ body {
 @media screen and (min-width: 1088px) {
   .logos__list-item {
     flex-basis: auto;
-=======
+  }
+}
+
 @media screen and (min-width: 768px), print {
   .info-section-wrapper {
     display: flex;
@@ -3130,7 +3128,6 @@ body {
     transform: none;
     object-fit: cover;
     object-position: center top;
->>>>>>> info-section
   }
 }
 
