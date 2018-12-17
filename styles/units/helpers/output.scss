@@ -20,17 +20,22 @@
 
 @include tablet{
 
-  .header--large-height{
-    padding-bottom:163px;
+  .tablet-basis-50{
+    flex-basis: 50%;
   }
+
   .main-container{
     max-width: 1160px;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
   }
 
   .tablet-mt-50{
     margin-top: 50px;
+  }
+
+  .tablet-mb-50{
+    margin-bottom: 50px;
   }
 
   .tablet-mr-60{
@@ -47,6 +52,14 @@
 }
 
 @include mobile{
+  .mob-mt-50{
+    margin-top: 50px;
+  }
+
+  .mob-mb-50{
+    margin-bottom: 50px;
+  }
+
   .mob-mt-10{
     margin-top: 10px;
   }
@@ -61,8 +74,12 @@
 }
 
 @include desktop{
-  .desk-pl-60{
-    padding-left:60px;
+  .desk-mt-150{
+    margin-top: 150px;
+  }
+
+  .desk-mb-100{
+    margin-bottom:100px;
   }
 
   .desktop-text-modifier{
@@ -84,4 +101,9 @@
   .desk-mt-75{
     margin-top:75px;
   }
+}
+
+
+.mb-40{
+  margin-bottom: 40px;
 }

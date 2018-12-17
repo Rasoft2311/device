@@ -18,6 +18,13 @@
   }
 }
 
+.header--large-height{
+  @include tablet{
+    padding-bottom:163px;
+  }
+
+}
+
 .header__name{
   font-size: $typography-h1;
   font-weight: bold;

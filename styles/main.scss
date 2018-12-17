@@ -5,7 +5,6 @@
 
 @import "units/typography/output";
 @import "units/base/output";
-@import "units/helpers/output";
 @import "components/header/output";
 @import "elements/search-input/output";
 @import "components/personal-area/output";
@@ -26,6 +25,7 @@
 @import "components/product-list/output";
 @import "components/products-nav/output";
 @import "components/order-fieldset/output";
+@import "units/helpers/output";
 
 fieldset{
   border: none;
@@ -33,114 +33,3 @@ fieldset{
 
 
 
-.visually-hidden {
-  position: absolute;
-  clip: rect(0 0 0 0);
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-}
-
-.display-none{
-  display: none;
-}
-
-.mr-20 {
-  margin-right: 20px;
-}
-
-.pr-35{
-  padding-right: 35px;
-}
-
-@include tablet{
-
-  .tablet-basis-50{
-    flex-basis: 50%;
-  }
-
-  .header--large-height{
-    padding-bottom:163px;
-  }
-  .main-container{
-    max-width: 1160px;
-    margin: 0 auto;
-  }
-
-  .tablet-mt-50{
-    margin-top: 50px;
-  }
-
-  .tablet-mb-50{
-    margin-bottom: 50px;
-  }
-
-  .tablet-mr-60{
-    margin-right: 60px;
-  }
-
-  .tablet-mr-76{
-    margin-right: 76px;
-  }
-
-  .tablet-mt-100{
-    margin-top:100px;
-  }
-}
-
-@include mobile{
-  .mob-mt-50{
-    margin-top: 50px;
-  }
-
-  .mob-mb-50{
-    margin-bottom: 50px;
-  }
-
-  .mob-mt-10{
-    margin-top: 10px;
-  }
-
-  .mob-mt-30{
-    margin-top: 30px;
-  }
-
-  .mob-display-none{
-    display: none;
-  }
-}
-
-@include desktop{
-  .desk-mt-150{
-    margin-top: 150px;
-  }
-
-  .desk-mb-100{
-    margin-bottom:100px;
-  }
-
-  .desktop-text-modifier{
-    padding-right: 108px;
-  }
-
-  .desk-ml-85{
-    margin-left: 85px;
-  }
-
-  .desk-ml-30{
-    margin-left: 30px;
-  }
-
-  .desk-mr-20{
-    margin-right: 20px;
-  }
-
-  .desk-mt-75{
-    margin-top:75px;
-  }
-}
-
-
-.mb-40{
-  margin-bottom: 40px;
-}
