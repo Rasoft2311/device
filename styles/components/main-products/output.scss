@@ -101,6 +101,8 @@
 
   @include mobile{
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 
   @include tablet{
@@ -133,6 +135,7 @@
   color:$color-text-primary;
 
   @include mobile{
+    padding: 0 20px;
     margin: 15px 0;
     text-align: justify;
   }

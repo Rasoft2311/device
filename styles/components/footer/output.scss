@@ -50,6 +50,12 @@
   }
 }
 
+.footer__personal-area-enter-button{
+  @include tablet{
+    margin-left: auto;
+  }
+}
+
 .footer__company-info{
 
   font-family: "Open Sans", sans-serif;
@@ -60,6 +66,12 @@
 
   @include mobile{
     padding:20px 0;
+  }
+}
+
+.footer__company-info:first-child{
+  @include desktop{
+    margin-right: -40px;
   }
 }
 
@@ -173,6 +185,10 @@
     width:80px;
     height: 7px;
     background-color: $color-text-third;
+  }
+
+  @include desktop{
+    margin-right: -50px;
   }
 
 }

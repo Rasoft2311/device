@@ -87,6 +87,7 @@
   color:$color-text-primary;
 
   @include mobile{
+    margin-top:20px;
     text-align: center;
   }
 

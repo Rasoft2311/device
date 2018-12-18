@@ -1730,6 +1730,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .header__list {
+    margin-top: 20px;
     text-align: center;
   }
 }
@@ -1946,7 +1947,7 @@ body {
 @media screen and (max-width: 767px) {
   .personal-area__profile {
     flex-basis: 100%;
-    margin: 10px 0;
+    margin: 10px 0 15px 0;
   }
 }
 @media screen and (min-width: 768px), print {
@@ -2127,6 +2128,8 @@ body {
 @media screen and (max-width: 767px) {
   .main-products__motivation {
     text-align: center;
+    margin-top: 15px;
+    margin-bottom: 25px;
   }
 }
 @media screen and (min-width: 768px), print {
@@ -2162,6 +2165,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .main-products__info {
+    padding: 0 20px;
     margin: 15px 0;
     text-align: justify;
   }
@@ -3366,6 +3370,12 @@ body {
   }
 }
 
+@media screen and (min-width: 768px), print {
+  .footer__personal-area-enter-button {
+    margin-left: auto;
+  }
+}
+
 .footer__company-info {
   font-family: "Open Sans", sans-serif;
   font-weight: 100;
@@ -3376,6 +3386,12 @@ body {
 @media screen and (max-width: 767px) {
   .footer__company-info {
     padding: 20px 0;
+  }
+}
+
+@media screen and (min-width: 1088px) {
+  .footer__company-info:first-child {
+    margin-right: -40px;
   }
 }
 
@@ -3494,6 +3510,11 @@ body {
     width: 80px;
     height: 7px;
     background-color: #ffc600;
+  }
+}
+@media screen and (min-width: 1088px) {
+  .footer__decoration-line {
+    margin-right: -50px;
   }
 }
 
@@ -4194,6 +4215,10 @@ body {
 
   .mob-mt-10 {
     margin-top: 10px;
+  }
+
+  .mob-mt-15 {
+    margin-top: 15px;
   }
 
   .mob-mt-30 {
